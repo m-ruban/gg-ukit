@@ -1,0 +1,4 @@
+{
+  "*.less": ["stylelint --syntax=less", "git add ."],
+  "*.{js,jsx}": ["eslint --fix", "git add ."]
+}

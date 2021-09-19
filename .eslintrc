@@ -1,0 +1,17 @@
+{
+    "root": true,
+    "extends": ["plugin:react/recommended", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "react-hooks/exhaustive-deps": "warn"
+    },
+    "settings": {
+        "react": {
+            "version": "17.0"
+        },
+        "import/resolver": {"webpack": {
+            "config": "./webpack.config.js"
+        }}
+    }
+}
