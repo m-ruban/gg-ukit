@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es2017",
+        "jsx": "react",
+        "moduleResolution": "node",
+        "typeRoots" : ["node_modules/@types"],
+        "esModuleInterop": true,
+        "paths": {
+            "root/*": ["./src/*"],
+            "components/*": ["./src/components/*"],
+            "stories/*": ["./src/stories/*"]
+        }
+    }
+}

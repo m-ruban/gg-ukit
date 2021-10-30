@@ -1,4 +1,6 @@
-const useLessLoader = require('storybook-less-loader')
+const path = require('path');
+const useLessLoader = require('storybook-less-loader');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     "stories": [
@@ -7,7 +9,16 @@ module.exports = {
     ],
     "addons": [
         "@storybook/addon-links",
-        "@storybook/addon-essentials"
+        "@storybook/addon-essentials",
+        "@storybook/addon-docs",
     ],
-    webpackFinal: async (config) => useLessLoader(config)
+    webpackFinal: async (config) => {
+        config.resolve.alias = {
+            ...config.resolve?.alias,
+            root: path.resolve(__dirname, 'src/'),
+            components: path.resolve(__dirname, 'src/components/'),
+        };
+        config.resolve.plugins = [new TsconfigPathsPlugin()];
+        return useLessLoader(config);
+    }
 }

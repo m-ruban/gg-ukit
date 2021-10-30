@@ -24,6 +24,8 @@ module.exports = {
     resolve: {
         alias: {
             root: path.resolve(__dirname, 'src/'),
+            components: path.resolve(__dirname, 'src/components/'),
+            stories: path.resolve(__dirname, 'src/stories/'),
         },
         extensions: ['.jsx', '.js', '.less', '.css', '.json', '.svg', '.gif', '.jpg'],
     },
