@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CustomDocsPage from 'stories/utils/CustomDocsPage';
 import { H1 as Header1, H2 as Header2, H3 as Header3, H4 as Header4 } from 'components/Header';
 import { HeaderLine } from 'components/Header/BasicHeader';
 
@@ -23,20 +24,37 @@ H4.args = {
     title: 'Header H4',
 };
 
+const DocsPage = () => (
+    <CustomDocsPage
+        description={
+            <>
+                <p>Стандартные заголовки H1, H2, H3, H4. Допустимо использовать заполнитель справа в виде черты.</p>
+            </>
+        }
+    />
+);
+
 export default {
     title: 'Headers',
     argTypes: {
         line: {
+            description: 'Тип линии',
             control: {
                 type: 'select',
                 options: HeaderLine,
             },
         },
         combineColor: {
+            description: 'Комбинирование цвета',
             defaultValue: false,
             control: {
                 type: 'boolean',
             },
+        },
+    },
+    parameters: {
+        docs: {
+            page: DocsPage,
         },
     },
 };

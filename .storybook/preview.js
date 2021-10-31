@@ -1,8 +1,10 @@
 import { themes } from '@storybook/theming';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
+        expanded: true,
         matchers: {
             color: /(background|color)$/i,
             date: /Date$/,
@@ -20,13 +22,7 @@ export const parameters = {
     docs: {
         theme: themes.dark,
     },
-    previewTabs: {
-        'storybook/docs/panel': {
-            index: 0,
-        },
-        canvas: {
-            index: 1,
-        },
+    viewport: {
+        viewports: INITIAL_VIEWPORTS,
     },
-    viewMode: 'docs',
 }

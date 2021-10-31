@@ -2,9 +2,6 @@ import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
 import 'components/Link/link.less';
 
-/**
- * Содержимое внутри строки
- * */
 export enum LinkType {
     Secondary = 'secondary',
     Promo = 'promo',

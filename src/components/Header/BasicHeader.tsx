@@ -49,7 +49,7 @@ const BasicHeader: FC<BasicHeaderProps> = ({ Tag, combineColor, line, title, typ
             {label}
             {line && (
                 <span
-                    className={classnames('gg-header-line', {
+                    className={classnames('gg-header-line', `gg-header-line_${type}`, {
                         'gg-header-line_tertiary': line === HeaderLine.TertiaryDimmed,
                     })}
                 />

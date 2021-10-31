@@ -7,7 +7,6 @@ interface HeaderProps {
     combineColor?: boolean;
 }
 
-/** Содержимое внутри строки*/
 export const H1: FC<HeaderProps> = ({ title, line, combineColor }: HeaderProps) => (
     <BasicHeader Tag={HeaderTag.H1} type={HeaderType.H1} line={line} title={title} combineColor={combineColor} />
 );
