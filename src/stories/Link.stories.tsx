@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CustomDocsPage from 'stories/utils/CustomDocsPage';
 import Link, { LinkType } from 'components/Link';
 
 export const DefaultLink = (args) => <Link {...args}>Default Link</Link>;
@@ -14,6 +14,16 @@ PromoLink.args = {
     type: LinkType.Promo,
 };
 
+const DocsPage = () => (
+    <CustomDocsPage
+        description={
+            <>
+                <p>Допустимо использовать, если действие должно приводить к открытию новой страницы.</p>
+            </>
+        }
+    />
+);
+
 export default {
     title: 'Links',
     component: Link,
@@ -24,6 +34,11 @@ export default {
                 type: 'select',
                 options: LinkType,
             },
+        },
+    },
+    parameters: {
+        docs: {
+            page: DocsPage,
         },
     },
 };

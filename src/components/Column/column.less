@@ -1,0 +1,39 @@
+@import '../../styles/screen';
+@import '../../styles/columns';
+
+.gg-column {
+    box-sizing: border-box;
+    width: @column-width-l;
+    padding: 0 @column-padding;
+    display: inline-block;
+}
+
+each(range(@column-counts-xs), {
+    .gg-column-xs_@{value} {
+       width: @value * @column-width-xs;
+    }
+});
+
+@media @screen-s {
+    each(range(@column-counts-s), {
+        .gg-column-s_@{value} {
+            width: (@value * @column-width-s) + (@value * 2 * @column-padding);
+        }
+    });
+}
+
+@media @screen-m {
+    each(range(@column-counts-m), {
+        .gg-column-m_@{value} {
+            width: (@value * @column-width-m) + (@value * 2 * @column-padding);
+        }
+    });
+}
+
+@media @screen-gt-m {
+    each(range(@column-counts-l), {
+        .gg-column-l_@{value} {
+            width: (@value * @column-width-l) + (@value * 2 * @column-padding);
+        }
+    });
+}

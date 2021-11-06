@@ -1,0 +1,116 @@
+html,
+body,
+div,
+span,
+table,
+tbody,
+thead,
+tfoot,
+tr,
+td,
+hr,
+br,
+p,
+em,
+abbr,
+strong,
+small,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+sub,
+sup,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+iframe,
+object,
+a,
+article,
+aside,
+audio,
+bdi,
+canvas,
+data,
+datalist,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+mark,
+meter,
+nav,
+output,
+progress,
+section,
+summary,
+time,
+video {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    font-size: inherit;
+}

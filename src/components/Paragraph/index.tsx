@@ -5,6 +5,6 @@ interface ParagraphProps {
     children: ReactNode;
 }
 
-const Paragraph: FC<ParagraphProps> = ({ children }) => <p className="gg-paragraph">{children}</p>;
+const Paragraph: FC<ParagraphProps> = ({ children }) => <div className="gg-paragraph">{children}</div>;
 
 export default Paragraph;

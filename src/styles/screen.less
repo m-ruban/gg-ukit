@@ -1,0 +1,16 @@
+@page-min-width: 320px;
+
+@breakpoint-xs-end: (@breakpoint-s-start - 1px);
+@breakpoint-s-start: 630px;
+@breakpoint-s-end: (@breakpoint-m-start - 1px);
+@breakpoint-m-start: 930px;
+@breakpoint-m-end: (@breakpoint-l-start - 1px);
+@breakpoint-l-start: 1200px;
+
+@screen-lt-s: ~'(max-width: @{breakpoint-xs-end})';
+@screen-gt-xs: ~'(min-width: @{breakpoint-s-start})';
+@screen-s: ~'(min-width: @{breakpoint-s-start}) and (max-width: @{breakpoint-s-end})';
+@screen-lt-m: ~'(max-width: @{breakpoint-s-end})';
+@screen-gt-s: ~'(min-width: @{breakpoint-m-start})';
+@screen-m: ~'(min-width: @{breakpoint-m-start}) and (max-width: @{breakpoint-m-end})';
+@screen-gt-m: ~'(min-width: @{breakpoint-l-start})';

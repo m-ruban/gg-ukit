@@ -1,0 +1,26 @@
+@import '../../styles/screen';
+@import '../../styles/columns';
+
+.gg-columns-wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: @column-counts-xs * @column-width-xs;
+}
+
+@media @screen-s {
+    .gg-columns-wrapper {
+        max-width: @column-counts-s * @column-width-s + (@column-counts-s * 2 * @column-padding);
+    }
+}
+
+@media @screen-m {
+    .gg-columns-wrapper {
+        max-width: @column-counts-m * @column-width-m + (@column-counts-m * 2 * @column-padding);
+    }
+}
+
+@media @screen-gt-m {
+    .gg-columns-wrapper {
+        max-width: @column-counts-l * @column-width-l + (@column-counts-l * 2 * @column-padding);
+    }
+}

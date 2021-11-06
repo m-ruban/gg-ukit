@@ -1,10 +1,10 @@
-@basic-font-size: 14px;
+@import './font-sizes';
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: Montserrat, sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: @bold-font-weight;
     font-display: swap;
-    src: url(./woff2/Montserrat-Bold.woff2) format('woff2');
+    src: url('./woff2/Montserrat-Bold.woff2') format('woff2');
     unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomDocsPage from 'stories/utils/CustomDocsPage';
 import ParagraphComponent from 'components/Paragraph';
 
 export const Paragraph = (args) => (
@@ -10,7 +11,22 @@ export const Paragraph = (args) => (
     </ParagraphComponent>
 );
 
+const DocsPage = () => (
+    <CustomDocsPage
+        description={
+            <>
+                <p>Стандартный текстовый абзац.</p>
+            </>
+        }
+    />
+);
+
 export default {
     title: 'Paragraph',
     component: ParagraphComponent,
+    parameters: {
+        docs: {
+            page: DocsPage,
+        },
+    },
 };
