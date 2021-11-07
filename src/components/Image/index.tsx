@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode, useState, useRef } from 'react';
 import classnames from 'classnames';
 import 'components/Image/image.less';
 
@@ -10,12 +10,16 @@ export enum ImageKind {
 interface ImageProps {
     src: string;
     alt: string;
+    lineColor?: string;
+    hoverView?: ReactNode;
+    onClick?: () => void;
     kind?: ImageKind;
-    href?: string;
     note?: string;
 }
 
-const Image: FC<ImageProps> = ({ src, alt, kind, href, note }) => {
+const Image: FC<ImageProps> = ({ src, alt, kind, note, hoverView, lineColor = '#DB9D39', onClick }) => {
+    const [hover, setHover] = useState<boolean>(false);
+    const img = useRef<HTMLImageElement>();
     return (
         <div
             className={classnames(
@@ -24,7 +28,24 @@ const Image: FC<ImageProps> = ({ src, alt, kind, href, note }) => {
                 { [`gg-img-wrapper_${kind}`]: kind }
             )}
         >
-            <img className={classnames('gg-img', { 'gg-img_noted': note })} src={src} alt={alt} />
+            {hoverView && hover && (
+                <div
+                    style={{ width: img.current?.width, height: img.current?.height }}
+                    className="gg-img-hover-wrapper"
+                    onMouseLeave={() => setHover(false)}
+                    onClick={onClick}
+                >
+                    {hoverView}
+                    <div style={{ backgroundColor: lineColor }} className="gg-img-hover-line" />
+                </div>
+            )}
+            <img
+                ref={img}
+                className={classnames('gg-img', { 'gg-img_noted': note }, { 'gg-img_hovered': hover })}
+                src={src}
+                alt={alt}
+                onMouseEnter={() => setHover(true)}
+            />
             {note && <div className="gg-img-note">{note}</div>}
         </div>
     );

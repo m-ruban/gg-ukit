@@ -4,7 +4,7 @@ import 'components/Icon/IconWrapper.less';
 type scaleKinds = 1 | 2;
 
 export interface IconProps {
-    scale: scaleKinds;
+    scale?: scaleKinds;
     color: string;
 }
 

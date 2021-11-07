@@ -1,8 +1,11 @@
 import React from 'react';
+import CustomDocsPage from 'stories/utils/CustomDocsPage';
 import Paragraph from 'components/Paragraph';
 import Column from 'components/Column';
 import ColumnsWrapper from 'components/ColumnsWrapper';
 import Image, { ImageKind } from 'components/Image';
+import SearchAdd from 'components/Icon/SearchAdd';
+import ArrowForward from 'components/Icon/ArrowForward';
 
 const TextExample = () => (
     <>
@@ -17,13 +20,18 @@ const TextExample = () => (
     </>
 );
 
+const basicProps = {
+    src: '/assets/example_preload.jpeg',
+    alt: 'test image',
+};
+
 export const Basic = (args) => (
     <ColumnsWrapper>
         <Column l={8} m={8}>
             <Paragraph>
                 Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
                 инфраструктура и четыре большие локации расположены по четырём частям света.
-                <Image src="/assets/example_preload.jpeg" alt="test image" {...args} />
+                <Image {...basicProps} {...args} />
             </Paragraph>
             <TextExample />
         </Column>
@@ -36,7 +44,7 @@ export const NotedImage = (args) => (
             <Paragraph>
                 Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
                 инфраструктура и четыре большие локации расположены по четырём частям света.
-                <Image src="/assets/example_preload.jpeg" alt="test image" {...args} />
+                <Image {...basicProps} {...args} />
             </Paragraph>
             <TextExample />
         </Column>
@@ -52,7 +60,7 @@ export const LeftImage = (args) => (
             <Paragraph>
                 Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
                 инфраструктура и четыре большие локации расположены по четырём частям света.
-                <Image src="/assets/example_preload.jpeg" alt="test image" {...args} />
+                <Image {...basicProps} {...args} />
             </Paragraph>
             <TextExample />
         </Column>
@@ -69,7 +77,7 @@ export const RightImage = (args) => (
             <Paragraph>
                 Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
                 инфраструктура и четыре большие локации расположены по четырём частям света.
-                <Image src="/assets/example_preload.jpeg" alt="test image" {...args} />
+                <Image {...basicProps} {...args} />
             </Paragraph>
             <TextExample />
         </Column>
@@ -80,8 +88,68 @@ RightImage.args = {
     note: 'Основой игры является исследование мира',
 };
 
+export const HoveredImage = (args) => (
+    <ColumnsWrapper>
+        <Column l={8} m={8}>
+            <Paragraph>
+                <Image {...basicProps} hoverView={<SearchAdd color="#DB9D39" scale={2} />} {...args} />
+                Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
+                инфраструктура и четыре большие локации расположены по четырём частям света.
+            </Paragraph>
+            <TextExample />
+        </Column>
+    </ColumnsWrapper>
+);
+HoveredImage.args = {
+    kind: ImageKind.Right,
+    note: 'Основой игры является исследование мира',
+};
+
+export const LinkImage = (args) => (
+    <ColumnsWrapper>
+        <Column l={8} m={8}>
+            <Paragraph>
+                <Image {...basicProps} hoverView={<ArrowForward color="#DB9D39" scale={2} />} {...args} />
+                Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
+                инфраструктура и четыре большие локации расположены по четырём частям света.
+            </Paragraph>
+            <TextExample />
+        </Column>
+    </ColumnsWrapper>
+);
+LinkImage.args = {
+    kind: ImageKind.Right,
+    note: 'Основой игры является исследование мира',
+    onClick: () => {
+        window.open('http://gamespirit.org/', '_blank');
+    },
+};
+
+const DocsPage = () => (
+    <CustomDocsPage
+        description={
+            <>
+                <p>Компонент Image имеет два обязательных параметра src и alt.</p>
+                <div>
+                    Необязательные параметры:
+                    <ul>
+                        <li>lineColor - цвет линии при hover</li>
+                        <li>hoverView - позволяет определить компонент, который будет отображаться при hover action</li>
+                        <li>onClick - обработчик события click</li>
+                        <li>
+                            kind - тип изображения, default value - изображение по центру, допустимо использовать
+                            Left/Right из enum ImageKind
+                        </li>
+                        <li>note - подпись для изображения</li>
+                    </ul>
+                </div>
+            </>
+        }
+    />
+);
+
 export default {
-    title: 'Images',
+    title: 'Image',
     component: Image,
     argTypes: {
         kind: {
@@ -97,6 +165,24 @@ export default {
             control: {
                 type: 'text',
             },
+        },
+        lineColor: {
+            description: 'Цвет линии наведнии',
+            control: {
+                type: 'color',
+            },
+        },
+        hoverView: {
+            description: 'Позволяет передать компонент, который будет отображаться при событии hover',
+        },
+        onClick: {
+            description: 'Обработчик события click',
+            action: 'clicked',
+        },
+    },
+    parameters: {
+        docs: {
+            page: DocsPage,
         },
     },
 };

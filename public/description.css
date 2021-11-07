@@ -1,3 +1,4 @@
+/* stylelint-disable */
 .description {
     font-family: "Nunito Sans",".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin: 10px 0;
@@ -8,8 +9,4 @@
 
 .description p {
     margin-bottom: 10px;
-}
-
-.description p:last-of-type {
-    margin-bottom: 0px;
 }

@@ -35,7 +35,7 @@ const DocsPage = () => (
 );
 
 export default {
-    title: 'Headers',
+    title: 'Header',
     argTypes: {
         line: {
             description: 'Тип линии',

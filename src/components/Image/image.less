@@ -13,6 +13,7 @@
 .gg-img-wrapper {
     .img-responsive();
 
+    position: relative;
     margin: @margin-img 0;
     padding: 30px;
     background-color: @tertiary;
@@ -46,6 +47,23 @@
 
 .gg-img_noted {
     margin-bottom: 0;
+}
+
+.gg-img-hover-wrapper {
+    cursor: pointer;
+    position: absolute;
+    background-color: fade(@tertiary-dimmed, 80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gg-img-hover-line {
+    position: absolute;
+    bottom: 0;
+    content: ' ';
+    width: 100%;
+    height: 4px;
 }
 
 .gg-img-note {

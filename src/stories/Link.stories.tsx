@@ -25,7 +25,7 @@ const DocsPage = () => (
 );
 
 export default {
-    title: 'Links',
+    title: 'Link',
     component: Link,
     argTypes: {
         type: {
