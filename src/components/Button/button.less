@@ -1,0 +1,56 @@
+@import '../../styles/colors';
+@import '../../styles/screen';
+@import '../../styles/fonts';
+
+.gg-button {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    background-color: #bd1c3d;
+    font-size: @primary-font-size;
+    color: @secondary;
+    transition: background-color 100ms ease-out;
+    line-height: 1;
+
+    &:hover {
+        background-color: #ac1c3a;
+    }
+
+    &:active {
+        background-color: #88162e;
+    }
+}
+
+.gg-button_secondary {
+    background-color: @secondary;
+    color: @tertiary-dimmed;
+
+    &:hover {
+        background-color: @secondary-dimmed;
+    }
+
+    &:active {
+        background-color: #c1c1c1;
+    }
+}
+
+.gg-button_dimmed {
+    background-color: @tertiary;
+}
+
+.gg-button_promo {
+    background-color: #475361;
+
+    &:hover {
+        background-color: @tertiary-dimmed;
+    }
+
+    &:active {
+        background-color: @tertiary;
+    }
+}
+
+.gg-button_rounded {
+    border-radius: 4px;
+}

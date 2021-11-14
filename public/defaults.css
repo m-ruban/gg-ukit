@@ -114,3 +114,31 @@ a {
     background: transparent;
     font-size: inherit;
 }
+
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    width: auto;
+    box-sizing: border-box;
+}
+
+textarea::placeholder {
+    text-indent: 0;
+}
+
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+input[type='image'],
+button {
+    cursor: pointer;
+    overflow: visible;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
