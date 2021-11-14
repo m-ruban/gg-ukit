@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 import 'components/Link/link.less';
 

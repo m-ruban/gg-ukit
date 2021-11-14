@@ -1,10 +1,9 @@
 import React, { FC, Fragment } from 'react';
 import Link from 'components/Link';
 import { LinkType } from 'components/Link';
+import ArrowRight from 'components/Icon/ArrowRight';
+import Colors from 'modules/colors';
 import 'components/Breadcrumbs/breadcrumbs.less';
-
-// TO DO change to Icon component
-const NEXT_LINK = '>';
 
 interface BreadcrumbProp {
     title: string;
@@ -23,7 +22,7 @@ const Breadcrumbs: FC<BreadcrumbsProp> = ({ links, linkType }: BreadcrumbsProp) 
                 <Link href={href} type={linkType}>
                     {title}
                 </Link>
-                {links.length - 1 !== index && <span className="gg-breadcrumbs-next">{NEXT_LINK}</span>}
+                {links.length - 1 !== index && <ArrowRight color={Colors.Secondary} />}
             </Fragment>
         ))}
     </div>

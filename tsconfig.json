@@ -13,7 +13,8 @@
         "paths": {
             "root/*": ["./src/*"],
             "components/*": ["./src/components/*"],
-            "stories/*": ["./src/stories/*"]
+            "stories/*": ["./src/stories/*"],
+            "modules/*": ["./src/modules/*"]
         }
     }
 }

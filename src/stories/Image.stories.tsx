@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CustomDocsPage from 'stories/utils/CustomDocsPage';
 import Paragraph from 'components/Paragraph';
 import Column from 'components/Column';
 import ColumnsWrapper from 'components/ColumnsWrapper';
-import Image, { ImageKind } from 'components/Image';
+import Image, { ImageKind, FullSizeImage } from 'components/Image';
 import SearchAdd from 'components/Icon/SearchAdd';
 import ArrowForward from 'components/Icon/ArrowForward';
+import ModalComponent from 'components/Modal';
 
 const TextExample = () => (
     <>
@@ -27,13 +28,8 @@ const basicProps = {
 
 export const Basic = (args) => (
     <ColumnsWrapper>
-        <Column l={8} m={8}>
-            <Paragraph>
-                Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
-                инфраструктура и четыре большие локации расположены по четырём частям света.
-                <Image {...basicProps} {...args} />
-            </Paragraph>
-            <TextExample />
+        <Column l={7} m={8}>
+            <Image {...basicProps} {...args} />
         </Column>
     </ColumnsWrapper>
 );
@@ -41,12 +37,7 @@ export const Basic = (args) => (
 export const NotedImage = (args) => (
     <ColumnsWrapper>
         <Column l={8} m={8}>
-            <Paragraph>
-                Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
-                инфраструктура и четыре большие локации расположены по четырём частям света.
-                <Image {...basicProps} {...args} />
-            </Paragraph>
-            <TextExample />
+            <Image {...basicProps} {...args} />
         </Column>
     </ColumnsWrapper>
 );
@@ -123,6 +114,40 @@ LinkImage.args = {
     onClick: () => {
         window.open('http://gamespirit.org/', '_blank');
     },
+};
+
+export const ModalImage = () => {
+    const [show, setShow] = useState<boolean>(false);
+    return (
+        <>
+            <ModalComponent
+                visible={show}
+                onClose={() => {
+                    setShow(!show);
+                }}
+            >
+                <FullSizeImage src="/assets/example_origin.jpeg" alt="origin image" />
+            </ModalComponent>
+            <ColumnsWrapper>
+                <Column l={8} m={8}>
+                    <Paragraph>
+                        <Image
+                            {...basicProps}
+                            kind={ImageKind.Right}
+                            note="Основой игры является исследование мира"
+                            hoverView={<SearchAdd color="#DB9D39" scale={2} />}
+                            onClick={() => {
+                                setShow(!show);
+                            }}
+                        />
+                        Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая
+                        герою инфраструктура и четыре большие локации расположены по четырём частям света.
+                    </Paragraph>
+                    <TextExample />
+                </Column>
+            </ColumnsWrapper>
+        </>
+    );
 };
 
 const DocsPage = () => (
