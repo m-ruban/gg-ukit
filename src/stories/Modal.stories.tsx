@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import Paragraph from 'components/Paragraph';
 import ModalComponent from 'components/Modal';
+import Button, { ButtonKind } from 'components/Button';
 
 export const Modal = () => {
     const [show, setShow] = useState<boolean>(false);
     return (
         <>
-            <button
+            <Button
+                kind={ButtonKind.Promo}
                 onClick={() => {
                     setShow(!show);
                 }}
             >
-                open
-            </button>
+                Open
+            </Button>
             <ModalComponent
                 visible={show}
                 onClose={() => {

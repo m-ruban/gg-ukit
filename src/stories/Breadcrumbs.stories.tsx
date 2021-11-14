@@ -5,11 +5,15 @@ import { LinkType } from 'components/Link';
 
 const links = [
     {
-        title: 'Link 1',
+        title: 'Home',
         href: '',
     },
     {
-        title: 'Link 2',
+        title: 'Обзоры игр',
+        href: '',
+    },
+    {
+        title: 'Обзор Call of the Sea',
         href: '',
     },
 ];
