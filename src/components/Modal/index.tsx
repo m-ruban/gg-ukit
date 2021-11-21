@@ -12,9 +12,18 @@ interface ModalProps extends ComponentPropsWithoutRef<'div'> {
     backgroundClick?: boolean;
     visible?: boolean;
     host?: HTMLElement;
+    disableScroll?: boolean;
 }
 
-const Modal: FC<ModalProps> = ({ onClose, children, visible = false, backgroundClick = true, host, ...modalProps }) => {
+const Modal: FC<ModalProps> = ({
+    onClose,
+    children,
+    visible = false,
+    backgroundClick = true,
+    disableScroll = false,
+    host,
+    ...modalProps
+}) => {
     const isClosable = useRef(true);
     const handleClose = useCallback(() => {
         if (isClosable.current) {
@@ -30,6 +39,7 @@ const Modal: FC<ModalProps> = ({ onClose, children, visible = false, backgroundC
     const setNonClosable = useCallback(() => {
         isClosable.current = false;
     }, []);
+    console.log(disableScroll);
 
     return ReactDOM.createPortal(
         <CSSTransition
@@ -38,8 +48,8 @@ const Modal: FC<ModalProps> = ({ onClose, children, visible = false, backgroundC
             timeout={150}
             mountOnEnter
             unmountOnExit
-            onEntering={Utils.disableScroll}
-            onExited={Utils.enableScroll}
+            onEntering={disableScroll ? Utils.disableScroll : () => {}}
+            onExited={disableScroll ? Utils.enableScroll : () => {}}
             classNames={{
                 enter: 'gg-modal-overlay',
                 enterActive: 'gg-modal-overlay gg-modal-overlay_visible',

@@ -1,0 +1,84 @@
+@import '../../styles/colors';
+@import '../../styles/screen';
+@import '../../styles/font-sizes';
+
+@slide-transition: transform 0.5s ease-in-out;
+
+.gg-slider {
+    border-radius: 4px;
+    padding: 20px;
+    background-color: @tertiary;
+}
+
+.gg-slider-content {
+    position: relative;
+}
+
+.gg-slider-scroller-area {
+    overflow: hidden;
+}
+
+.gg-slider-items {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    transition: @slide-transition;
+}
+
+.gg-slider-item {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.gg-slider-controls {
+    display: none;
+
+    @media @screen-gt-xs {
+        display: flex;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        align-items: center;
+    }
+}
+
+.gg-slider-controls__arrow {
+    display: block;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.gg-slider-controls__arrow_left {
+    margin-left: 5px;
+}
+
+.gg-slider-controls__arrow_right {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.gg-slider-controls_status-line {
+    content: ' ';
+    background-color: @primary;
+    height: 4px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    transition: @slide-transition;
+}
+
+.gg-slider-note {
+    font-family: 'Open Sans', sans-serif;
+    font-size: @primary-font-size;
+    color: #738697;
+    line-height: 1.5;
+    min-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+}

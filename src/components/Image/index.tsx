@@ -9,15 +9,6 @@ export enum ImageKind {
     Right = 'right',
 }
 
-interface FullSizeImageProps {
-    src: string;
-    alt: string;
-}
-
-export const FullSizeImage: FC<FullSizeImageProps> = ({ src, alt }) => (
-    <img className="gg-full-size-image" src={src} alt={alt} />
-);
-
 interface ImageProps {
     src: string;
     alt: string;
@@ -33,6 +24,11 @@ const Image: FC<ImageProps> = ({ src, alt, kind, note, hoverView, lineColor = Co
     const img = useRef<HTMLImageElement>();
     return (
         <div
+            onMouseLeave={() => {
+                if (hover) {
+                    setHover(false);
+                }
+            }}
             className={classnames(
                 'gg-img-wrapper',
                 { [`gg-img-wrapper_left-or-right`]: kind },
@@ -55,7 +51,9 @@ const Image: FC<ImageProps> = ({ src, alt, kind, note, hoverView, lineColor = Co
                         <div
                             className="gg-img-hover"
                             style={{ width: img.current?.width, height: img.current?.height }}
-                            onMouseLeave={() => setHover(false)}
+                            onMouseLeave={() => {
+                                setHover(false);
+                            }}
                             onClick={onClick}
                         >
                             {hoverView}
