@@ -26,9 +26,7 @@ RoundedButton.args = {
 };
 
 export const IconButton = (args) => (
-    <ButtonComponent {...args}>
-        <ArrowLeftAlt2 color={Colors.Secondary} scale={2} />
-    </ButtonComponent>
+    <ButtonComponent {...args} icon={<ArrowLeftAlt2 color={Colors.Secondary} scale={1} />} />
 );
 IconButton.args = {
     rounded: true,

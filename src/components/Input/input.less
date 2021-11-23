@@ -1,0 +1,42 @@
+@import '../../styles/colors';
+
+.gg-input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: @promo;
+    border: 1px solid #475361;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 100ms ease-out;
+
+    &::placeholder {
+        color: #455363;
+    }
+
+    &:hover {
+        border-color: @promo;
+    }
+
+    &:invalid {
+        border-color: @primary;
+    }
+}
+
+.gg-input_secondary {
+    color: @tertiary;
+    background-color: @secondary;
+    border-color: @secondary;
+
+    &::placeholder {
+        color: @promo;
+    }
+
+    &:hover {
+        border-color: @secondary-dimmed;
+    }
+
+    &:invalid {
+        border-color: @primary;
+    }
+}

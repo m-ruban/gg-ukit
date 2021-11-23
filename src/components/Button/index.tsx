@@ -9,19 +9,25 @@ export enum ButtonKind {
 }
 
 interface ButtonProps {
-    children: ReactNode;
+    children?: ReactNode;
+    icon?: ReactNode;
     onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
     kind?: ButtonKind;
     rounded?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ children, onClick = () => {}, kind, rounded, ...btnProps }) => (
+const Button: FC<ButtonProps> = ({ children, onClick = () => {}, kind, rounded, icon, ...btnProps }) => (
     <button
-        className={classnames('gg-button', { [`gg-button_${kind}`]: kind }, { 'gg-button_rounded': rounded })}
+        className={classnames(
+            'gg-button',
+            { [`gg-button_${kind}`]: kind },
+            { 'gg-button_rounded': rounded },
+            { 'gg-button_with-icon': icon }
+        )}
         onClick={onClick}
         {...btnProps}
     >
-        {children}
+        {icon || children}
     </button>
 );
 
