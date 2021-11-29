@@ -39,7 +39,6 @@ const Modal: FC<ModalProps> = ({
     const setNonClosable = useCallback(() => {
         isClosable.current = false;
     }, []);
-    console.log(disableScroll);
 
     return ReactDOM.createPortal(
         <CSSTransition

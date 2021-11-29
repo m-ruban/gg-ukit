@@ -1,0 +1,68 @@
+@import '../../styles/colors';
+@import '../../styles/screen';
+
+@pager-margin: 10px;
+
+// mixins
+.pager-item() {
+    font-family: 'Open Sans', sans-serif;
+    color: @secondary;
+    font-size: 28px;
+    margin-left: @pager-margin;
+}
+
+.pager-item-hovered() {
+    &:hover {
+        cursor: pointer;
+        color: @primary;
+    }
+}
+
+// containers
+.gg-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media @screen-gt-xs {
+        justify-content: normal;
+    }
+}
+
+.gg-pager-extended-list {
+    display: none;
+
+    @media @screen-gt-xs {
+        display: block;
+    }
+}
+
+// items and arrows
+.gg-pager-item {
+    .pager-item();
+    .pager-item-hovered();
+}
+
+.gg-pager-item_selected {
+    border: 3px solid @secondary;
+    border-radius: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    &:hover {
+        border-color: @primary;
+    }
+}
+
+.gg-pager-arrow {
+    cursor: pointer;
+    display: flex;
+}
+
+.gg-pager-arrow_right {
+    margin-left: @pager-margin;
+}
+
+.gg-pager-reduction {
+    .pager-item();
+}
