@@ -1,0 +1,43 @@
+@import '../../styles/colors';
+
+.gg-tooltip-wrapper {
+    position: relative;
+    display: inline-flex;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::before {
+        content: '\00a0';
+    }
+}
+
+.gg-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    background-color: @tertiary-dimmed;
+    font-family: 'Open Sans', sans-serif;
+    color: @secondary-dimmed;
+    padding: 7px 10px;
+    border-radius: 5px;
+    max-width: 200px;
+    width: max-content;
+}
+
+.gg-tooltip_visible {
+    display: block;
+}
+
+.gg-tooltip-arrow {
+    position: absolute;
+    top: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent @tertiary-dimmed transparent;
+}
+
+.gg-tooltip-link {
+    text-decoration: underline;
+}
