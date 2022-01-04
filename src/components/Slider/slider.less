@@ -47,32 +47,30 @@
     }
 }
 
-.gg-slider-controls__arrow {
+.gg-slider-content__arrow {
     display: block;
     opacity: 0.7;
     transition: opacity 0.3s;
+    position: absolute;
+    top: calc(50% - 22px);
 
     &:hover {
         opacity: 1;
     }
 }
 
-.gg-slider-controls__arrow_left {
-    margin-left: 5px;
-}
-
-.gg-slider-controls__arrow_right {
-    margin-left: auto;
-    margin-right: 5px;
+.gg-slider-content__arrow_right {
+    right: 0;
 }
 
 .gg-slider-controls_status-line {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
     content: ' ';
     background-color: @primary;
     height: 4px;
     width: 50%;
-    position: absolute;
-    bottom: 0;
     transition: @slide-transition;
 }
 
@@ -83,7 +81,6 @@
     font-size: @primary-font-size;
     color: #738697;
     line-height: 1.5;
-    min-height: 30px;
     text-align: center;
     margin-top: 5px;
 }

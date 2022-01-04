@@ -1,0 +1,47 @@
+@import '../../styles/colors';
+@import '../../styles/screen';
+@import '../../styles/font-sizes';
+@import '../../styles/mixins';
+
+@margin-wrapped-img: 30px;
+@short-margin-wrapped-img: 15px;
+
+// wrapper
+.gg-img-wrapper {
+    .img-responsive();
+
+    position: relative;
+    margin: @margin-wrapped-img 0;
+    padding: 20px;
+    background-color: @tertiary;
+    border-radius: 4px;
+}
+
+@media @screen-gt-xs {
+    .gg-img-wrapper_left-or-right {
+        padding: 20px;
+        max-width: 270px;
+        border-top: none;
+    }
+
+    .gg-img-wrapper_left {
+        float: left;
+        margin: @short-margin-wrapped-img @margin-wrapped-img @short-margin-wrapped-img 0;
+    }
+
+    .gg-img-wrapper_right {
+        float: right;
+        margin: @short-margin-wrapped-img 0 @short-margin-wrapped-img @margin-wrapped-img;
+    }
+}
+
+// note
+.gg-img-note {
+    font-family: 'Open Sans', sans-serif;
+    font-size: @primary-font-size;
+    color: #738697;
+    line-height: 1.5;
+    min-height: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
