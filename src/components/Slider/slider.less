@@ -3,6 +3,16 @@
 @import '../../styles/font-sizes';
 
 @slide-transition: transform 0.5s ease-in-out;
+@preview-height: 50px;
+@preview-margin: 10px;
+@status-line-opacity: 0.8;
+
+.status-line() {
+    position: absolute;
+    content: ' ';
+    background-color: @primary;
+    height: 4px;
+}
 
 // container
 .gg-slider {
@@ -26,33 +36,63 @@
     transition: @slide-transition;
 }
 
-// items and controls
+.gg-slider-items_previews {
+    scrollbar-width: none;
+    margin-top: @preview-margin;
+    overflow-x: auto;
+    overflow-y: hidden;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+// items
 .gg-slider-item {
     width: 100%;
     flex-shrink: 0;
 }
 
-.gg-slider-controls {
-    display: none;
+.gg-slider-preview {
+    position: relative;
+    margin-right: 15px;
+    flex-shrink: 0;
+    height: @preview-height;
 
-    @media @screen-gt-xs {
-        display: flex;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::after {
+        .status-line();
+
+        opacity: 0;
+        bottom: 0;
         left: 0;
-        align-items: center;
+        width: 100%;
+        transition-property: opacity;
+        transition-duration: 200ms;
+        transition-timing-function: linear;
     }
 }
 
+.gg-slider-preview_active {
+    &::after {
+        opacity: @status-line-opacity;
+    }
+}
+
+// controls
 .gg-slider-content__arrow {
     display: block;
     opacity: 0.7;
     transition: opacity 0.3s;
     position: absolute;
-    top: calc(50% - 22px);
+    top: calc(50% - 44px); // =)
 
     &:hover {
         opacity: 1;
@@ -63,19 +103,19 @@
     right: 0;
 }
 
-.gg-slider-controls_status-line {
-    position: absolute;
+.gg-slider-content__status-line {
+    .status-line();
+
+    opacity: @status-line-opacity;
     bottom: 0;
-    opacity: 0.7;
-    content: ' ';
-    background-color: @primary;
-    height: 4px;
-    width: 50%;
     transition: @slide-transition;
 }
 
-// note
+.gg-slider-content__status-line_previews {
+    bottom: @preview-height + @preview-margin;
+}
 
+// note
 .gg-slider-note {
     font-family: 'Open Sans', sans-serif;
     font-size: @primary-font-size;

@@ -16,12 +16,20 @@ export const DefaultSlider = (args) => (
             <SliderComponent
                 {...args}
                 slides={[
-                    <div key="slide_1" style={slideStyleExample}>
-                        <Paragraph>Slide 1</Paragraph>
-                    </div>,
-                    <div key="slide_2" style={slideStyleExample}>
-                        <Paragraph>Slide 2</Paragraph>
-                    </div>,
+                    {
+                        view: (
+                            <div key="slide_1" style={slideStyleExample}>
+                                <Paragraph>Slide 1</Paragraph>
+                            </div>
+                        ),
+                    },
+                    {
+                        view: (
+                            <div key="slide_2" style={slideStyleExample}>
+                                <Paragraph>Slide 2</Paragraph>
+                            </div>
+                        ),
+                    },
                 ]}
             />
         </Column>
@@ -29,10 +37,8 @@ export const DefaultSlider = (args) => (
 );
 
 const emptyImg: BasicImageProps = { src: '', alt: '' };
-const images: BasicImageProps[] = [
-    { src: '/assets/example_preload.jpeg', alt: 'test image 1' },
-    { src: '/assets/example_preload_2.jpeg', alt: 'test image 2' },
-];
+const slide1 = { src: '/assets/example_preload.jpeg', alt: 'test image 1' };
+const slide2 = { src: '/assets/example_preload_2.jpeg', alt: 'test image 2' };
 
 export const ImageSlider = (args) => {
     const [zoomImg, setZoomImg] = useState<{ show: boolean; img: BasicImageProps }>({
@@ -53,16 +59,20 @@ export const ImageSlider = (args) => {
                 <Column l={7} m={8}>
                     <SliderComponent
                         {...args}
-                        slides={images.map((image, index) => (
-                            <HoveredImage
-                                key={index}
-                                {...image}
-                                hoverView={<SearchAdd color="#DB9D39" scale={2} />}
-                                onHoverViewClick={() => {
-                                    setZoomImg({ show: true, img: { ...image } });
-                                }}
-                            />
-                        ))}
+                        slides={[slide1, slide2].map((image, index) => {
+                            return {
+                                view: (
+                                    <HoveredImage
+                                        {...image}
+                                        hoverView={<SearchAdd color="#DB9D39" scale={2} />}
+                                        onHoverViewClick={() => {
+                                            setZoomImg({ show: true, img: { ...image } });
+                                        }}
+                                    />
+                                ),
+                                preview: <Image {...image} />,
+                            };
+                        })}
                     />
                 </Column>
             </ColumnsWrapper>
@@ -70,17 +80,29 @@ export const ImageSlider = (args) => {
     );
 };
 
+const notedSlidesExample = [
+    {
+        view: (
+            <div style={{ display: 'flex' }}>
+                <Image {...slide1} />
+            </div>
+        ),
+        preview: <Image {...slide1} />,
+    },
+    {
+        view: (
+            <div style={{ display: 'flex' }}>
+                <Image {...slide2} />
+            </div>
+        ),
+        preview: <Image {...slide2} />,
+    },
+];
+
 export const NotedSlider = (args) => (
     <ColumnsWrapper>
         <Column l={7} m={8}>
-            <SliderComponent
-                {...args}
-                slides={images.map((image, index) => (
-                    <div key={index} style={{ display: 'flex' }}>
-                        <Image {...image} />
-                    </div>
-                ))}
-            />
+            <SliderComponent {...args} slides={notedSlidesExample} />
         </Column>
     </ColumnsWrapper>
 );
