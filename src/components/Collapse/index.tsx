@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useState } from 'react';
-import classnames from 'classnames';
+import CSSTransition from 'react-transition-group/CSSTransition';
 import { H3 } from 'components/Header';
 import ArrowDown from 'components/Icon/ArrowDown';
 import ArrowUp from 'components/Icon/ArrowUp';
@@ -28,7 +28,17 @@ const Collapse: FC<CollapseProps> = ({ title, children, defaultShow = false }) =
                     {show && <ArrowUp color={Colors.Secondary} />}
                 </span>
             </div>
-            <div className={classnames('gg-collapse-item ', { 'gg-collapse-item_show': show })}>{children}</div>
+            <CSSTransition
+                in={show}
+                timeout={300}
+                classNames={{
+                    enter: 'gg-collapse-item',
+                    enterActive: 'gg-collapse-item gg-collapse-item_visible',
+                    enterDone: 'gg-collapse-item gg-collapse-item_visible',
+                }}
+            >
+                <>{show && <div>{children}</div>}</>
+            </CSSTransition>
         </div>
     );
 };

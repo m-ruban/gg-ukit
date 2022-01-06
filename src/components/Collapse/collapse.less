@@ -11,12 +11,14 @@
 }
 
 .gg-collapse-item {
-    max-height: 0;
-    transition: max-height 300ms ease-out;
-    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: background-color, visibility, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
 }
 
-.gg-collapse-item_show {
-    max-height: 500px;
-    transition: max-height 300ms ease-in;
+.gg-collapse-item_visible {
+    visibility: visible;
+    opacity: 1;
 }

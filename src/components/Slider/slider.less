@@ -1,6 +1,7 @@
 @import '../../styles/colors';
 @import '../../styles/screen';
 @import '../../styles/font-sizes';
+@import '../../styles/mixins';
 
 @slide-transition: transform 0.5s ease-in-out;
 @preview-height: 50px;
@@ -117,10 +118,8 @@
 
 // note
 .gg-slider-note {
-    font-family: 'Open Sans', sans-serif;
-    font-size: @primary-font-size;
-    color: #738697;
-    line-height: 1.5;
+    .basic-text();
+
     text-align: center;
     margin-top: 5px;
 }
