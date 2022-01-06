@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 import Link from 'components/Link';
 import { LinkType } from 'components/Link';
 import ArrowRight from 'components/Icon/ArrowRight';
