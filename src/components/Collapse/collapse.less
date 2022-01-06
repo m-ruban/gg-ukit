@@ -1,0 +1,22 @@
+.gg-collapse-title {
+    display: flex;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.gg-collapse-title_icon {
+    margin-left: 5px;
+}
+
+.gg-collapse-item {
+    max-height: 0;
+    transition: max-height 300ms ease-out;
+    overflow: hidden;
+}
+
+.gg-collapse-item_show {
+    max-height: 500px;
+    transition: max-height 300ms ease-in;
+}
