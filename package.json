@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "storybook": "start-storybook -p 6006 -s ./public/",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s ./public/"
   },
   "dependencies": {
     "classnames": "^2.3.1",

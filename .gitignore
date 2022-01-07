@@ -4,3 +4,5 @@ yarn-error.log
 dist
 .idea
 .DS_Store
+storybook-static
+deploy.sh
