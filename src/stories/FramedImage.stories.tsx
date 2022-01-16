@@ -1,5 +1,5 @@
-import React  from 'react';
-import CustomDocsPage from 'stories/utils/CustomDocsPage';
+import React from 'react';
+import CustomDocsPage from 'stories/CustomDocsPage.utils';
 import Paragraph from 'components/Paragraph';
 import Column from 'components/Column';
 import ColumnsWrapper from 'components/ColumnsWrapper';

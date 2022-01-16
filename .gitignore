@@ -6,3 +6,4 @@ dist
 .DS_Store
 storybook-static
 deploy.sh
+build

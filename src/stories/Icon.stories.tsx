@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CustomDocsPage from 'stories/utils/CustomDocsPage';
+import CustomDocsPage from 'stories/CustomDocsPage.utils';
 
 import Add from 'components/Icon/Add';
 import AddAlt from 'components/Icon/AddAlt';

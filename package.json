@@ -1,10 +1,14 @@
 {
-  "name": "gg-ui",
-  "version": "0.0.1",
-  "description": "gg-ui",
+  "name": "gg-ukit",
+  "version": "0.0.2",
+  "description": "gg-ukit",
   "license": "MIT",
-  "repository": "m-ruban/gg-ui",
+  "repository": "m-ruban/gg-ukit",
+  "directories": {
+    "lib": "build/"
+  },
   "scripts": {
+    "build": "gulp clean && gulp lint && gulp raw-copy && gulp js-build",
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "storybook": "start-storybook -p 6006 -s ./public/",
     "build-storybook": "build-storybook -s ./public/"
@@ -13,13 +17,19 @@
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "^4.4.2",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "react": ">= 17.0.2 < 18",
+    "react-dom": ">= 17.0.2 < 18"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/plugin-proposal-optional-chaining": "^7.14.5",
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "7.15.0",
     "@hh.ru/stylelint-config-hh": "~4.1.0",
     "@storybook/addon-actions": "^6.3.8",
     "@storybook/addon-essentials": "^6.3.8",
@@ -30,6 +40,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.3.0",
+    "del": "~2.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-webpack": "^0.13.1",
@@ -39,6 +50,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gulp": "~4.0.2",
+    "gulp-babel": "~8.0.0",
+    "gulp-cached": "~1.1.1",
+    "gulp-eslint7": "~0.3.1",
+    "gulp-plumber": "~1.2.0",
+    "gulp-sourcemaps": "~3.0.0",
+    "gulp-stylelint": "13.0.0",
     "html-webpack-plugin": "^5.3.2",
     "less": "^4.1.1",
     "less-loader": "7.3.0",
@@ -54,6 +72,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "~3.19.0",
+    "ts-loader": "^9.2.6",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.53.0"

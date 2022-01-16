@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomDocsPage from 'stories/utils/CustomDocsPage';
+import CustomDocsPage from 'stories/CustomDocsPage.utils';
 import BreadcrumbsComponent from 'components/Breadcrumbs';
 import { LinkType } from 'components/Link';
 

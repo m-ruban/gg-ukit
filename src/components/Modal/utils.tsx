@@ -12,7 +12,7 @@ const getScrollbarWidth = (): number => {
     const scrollbarWidth = div.offsetWidth - div.clientWidth;
     document.body.removeChild(div);
     return scrollbarWidth;
-}
+};
 
 export default {
     enableScroll: (): void => {

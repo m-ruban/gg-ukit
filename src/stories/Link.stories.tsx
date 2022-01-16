@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomDocsPage from 'stories/utils/CustomDocsPage';
+import CustomDocsPage from 'stories/CustomDocsPage.utils';
 import Link, { LinkType } from 'components/Link';
 
 export const DefaultLink = (args) => <Link {...args}>Default Link</Link>;

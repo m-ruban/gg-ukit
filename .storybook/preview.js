@@ -11,10 +11,10 @@ export const parameters = {
         },
     },
     backgrounds: {
-        default: 'gg-ui',
+        default: 'gg-ukit',
         values: [
             {
-                name: 'gg-ui',
+                name: 'gg-ukit',
                 value: '#1F2327',
             },
         ],

@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomDocsPage from 'stories/utils/CustomDocsPage';
+import CustomDocsPage from 'stories/CustomDocsPage.utils';
 import CollapseComponent from 'components/Collapse';
 import Paragraph from 'components/Paragraph';
 

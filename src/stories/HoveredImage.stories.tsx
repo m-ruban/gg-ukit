@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CustomDocsPage from 'stories/utils/CustomDocsPage';
+import CustomDocsPage from 'stories/CustomDocsPage.utils';
 import Column from 'components/Column';
 import ColumnsWrapper from 'components/ColumnsWrapper';
 import Image from 'components/Image';
