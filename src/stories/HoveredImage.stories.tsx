@@ -7,6 +7,7 @@ import SearchAdd from 'components/Icon/SearchAdd';
 import Modal from 'components/Modal';
 
 import HoveredImageComponent from 'components/Image/HoveredImage';
+import Colors from 'modules/colors';
 
 export const BasicImage = (args) => (
     <ColumnsWrapper>
@@ -54,14 +55,6 @@ const DocsPage = () => (
         description={
             <>
                 <p>Компонент HoveredImage имеет два обязательных параметра src и alt.</p>
-                <div>
-                    Необязательные параметры:
-                    <ul>
-                        <li>lineColor - цвет линии при hover</li>
-                        <li>hoverView - позволяет определить компонент, который будет отображаться при hover action</li>
-                        <li>onHoverViewClick - обработчик события click</li>
-                    </ul>
-                </div>
             </>
         }
     />
@@ -78,7 +71,26 @@ export default {
             },
         },
         hoverView: {
-            description: 'Позволяет передать компонент, который будет отображаться при событии hover',
+            table: {
+                disable: true,
+            },
+        },
+        src: {
+            table: {
+                disable: true,
+            },
+        },
+        alt: {
+            table: {
+                disable: true,
+            },
+        },
+        note: {
+            description: 'Сноска для изображения',
+            defaultValue: '',
+            control: {
+                type: 'text',
+            },
         },
         onHoverViewClick: {
             description: 'Обработчик события click на hoverView',

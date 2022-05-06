@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 import HoveredImage, { HoveredImageProps } from 'components/Image/HoveredImage';
-import 'components/Image/framedImage.less';
+import 'gg-ukit/components/Image/framedImage.less';
 
 export enum FramedImageKind {
     Left = 'left',

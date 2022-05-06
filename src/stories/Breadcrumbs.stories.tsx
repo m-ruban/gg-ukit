@@ -18,7 +18,10 @@ const links = [
     },
 ];
 
-export const Breadcrumbs = (args) => <BreadcrumbsComponent {...args} links={links} />;
+export const Breadcrumbs = (args) => <BreadcrumbsComponent {...args} />;
+Breadcrumbs.args = {
+    links: links,
+};
 
 const DocsPage = () => (
     <CustomDocsPage
@@ -39,6 +42,22 @@ export default {
             control: {
                 type: 'select',
                 options: LinkType,
+            },
+        },
+        links: {
+            description: 'Ссылки для пагинации',
+            type: 'select',
+            options: {
+                Example: [
+                    {
+                        title: 'Test',
+                        href: '',
+                    },
+                    {
+                        title: 'Test1',
+                        href: '',
+                    },
+                ],
             },
         },
     },

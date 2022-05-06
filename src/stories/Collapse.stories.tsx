@@ -53,5 +53,10 @@ export default {
                 type: 'text',
             },
         },
+        defaultShow: {
+            table: {
+                disable: true,
+            },
+        },
     },
 };

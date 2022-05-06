@@ -3,9 +3,10 @@ import CustomDocsPage from 'stories/CustomDocsPage.utils';
 import Paragraph from 'components/Paragraph';
 import Column from 'components/Column';
 import ColumnsWrapper from 'components/ColumnsWrapper';
-import Image from 'components/Image';
 
 import FramedImageComponent, { FramedImageKind } from 'components/Image/FramedImage';
+import Colors from 'modules/colors';
+import SearchAdd from 'components/Icon/SearchAdd';
 
 const TextExample = () => (
     <Paragraph>
@@ -77,16 +78,6 @@ const DocsPage = () => (
         description={
             <>
                 <p>Компонент Framed Image имеет два обязательных параметра src и alt.</p>
-                <div>
-                    Необязательные параметры:
-                    <ul>
-                        <li>
-                            kind - тип изображения, default value - изображение по центру, допустимо использовать
-                            Left/Right из enum ImageKind
-                        </li>
-                        <li>note - подпись для изображения</li>
-                    </ul>
-                </div>
             </>
         }
     />
@@ -94,7 +85,7 @@ const DocsPage = () => (
 
 export default {
     title: 'Image/Framed Image',
-    component: Image,
+    component: FramedImageComponent,
     argTypes: {
         kind: {
             description: 'Тип изображения',
@@ -108,6 +99,21 @@ export default {
             defaultValue: '',
             control: {
                 type: 'text',
+            },
+        },
+        hoverView: {
+            table: {
+                disable: true,
+            },
+        },
+        src: {
+            table: {
+                disable: true,
+            },
+        },
+        alt: {
+            table: {
+                disable: true,
             },
         },
     },

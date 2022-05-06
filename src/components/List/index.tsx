@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import 'components/List/list.less';
+import 'gg-ukit/components/List/list.less';
 
 interface ListProps {
     children: ReactNode;

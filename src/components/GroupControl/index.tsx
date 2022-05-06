@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import 'components/GroupControl/groupControl.less';
+import 'gg-ukit/components/GroupControl/groupControl.less';
 
 interface GroupControlProps {
     children: ReactNode;

@@ -4,7 +4,7 @@ import { LinkType } from 'components/Link';
 import ArrowRight from 'components/Icon/ArrowRight';
 import HomeAlt from 'components/Icon/HomeAlt';
 import Colors from 'modules/colors';
-import 'components/Breadcrumbs/breadcrumbs.less';
+import 'gg-ukit/components/Breadcrumbs/breadcrumbs.less';
 
 interface BreadcrumbProp {
     title: string;

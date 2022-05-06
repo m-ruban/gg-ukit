@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import 'components/Note/note.less';
+import 'gg-ukit/components/Note/note.less';
 
 interface NoteProps {
     children: ReactNode;

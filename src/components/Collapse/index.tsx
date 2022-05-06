@@ -4,7 +4,7 @@ import { H3 } from 'components/Header';
 import ArrowDown from 'components/Icon/ArrowDown';
 import ArrowUp from 'components/Icon/ArrowUp';
 import Colors from 'modules/colors';
-import 'components/Collapse/collapse.less';
+import 'gg-ukit/components/Collapse/collapse.less';
 
 interface CollapseProps {
     title: string;

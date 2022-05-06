@@ -25,12 +25,11 @@ RoundedButton.args = {
     rounded: true,
 };
 
-export const IconButton = (args) => (
-    <ButtonComponent {...args} icon={<ArrowLeftAlt2 color={Colors.Secondary} scale={1} />} />
-);
+export const IconButton = (args) => <ButtonComponent {...args} />;
 IconButton.args = {
     rounded: true,
     kind: ButtonKind.Promo,
+    icon: <ArrowLeftAlt2 color={Colors.Secondary} scale={1} />,
 };
 
 export default {
@@ -54,6 +53,11 @@ export default {
         onClick: {
             description: 'Обработчик события click',
             action: 'clicked',
+        },
+        icon: {
+            table: {
+                disable: true,
+            },
         },
     },
 };

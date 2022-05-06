@@ -5,7 +5,7 @@ import Colors from 'modules/colors';
 import Utils from 'components/Modal/utils';
 import Decline from 'components/Icon/Decline';
 
-import 'components/Modal/modal.less';
+import 'gg-ukit/components/Modal/modal.less';
 
 interface ModalProps extends ComponentPropsWithoutRef<'div'> {
     onClose: () => void;

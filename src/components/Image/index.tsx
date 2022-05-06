@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
-import 'components/Image/image.less';
+import 'gg-ukit/components/Image/image.less';
 
 export interface BasicImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
     src: string;

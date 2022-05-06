@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import Colors from 'modules/colors';
 import ArrowLeftAlt2 from 'components/Icon/ArrowLeftAlt2';
 import ArrowRightAlt2 from 'components/Icon/ArrowRightAlt2';
-import 'components/Pager/pager.less';
+import 'gg-ukit/components/Pager/pager.less';
 
 const PAGE_PARAM = 'page';
 

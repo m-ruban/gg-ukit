@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import 'components/Input/input.less';
+import 'gg-ukit/components/Input/input.less';
 
 export enum InputKind {
     Secondary = 'secondary',

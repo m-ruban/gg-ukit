@@ -17,4 +17,11 @@ export const Tooltip = (args) => (
 export default {
     title: 'Tooltip',
     component: TooltipComponent,
+    argTypes: {
+        view: {
+            table: {
+                disable: true,
+            },
+        },
+    },
 };

@@ -121,5 +121,10 @@ export default {
                 type: 'text',
             },
         },
+        slides: {
+            table: {
+                disable: true,
+            },
+        },
     },
 };

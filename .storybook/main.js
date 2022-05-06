@@ -12,6 +12,7 @@ module.exports = {
         "@storybook/addon-links",
         "@storybook/addon-essentials",
     ],
+    staticDirs: ['../public', '../src/styles/woff'],
     webpackFinal: async (config) => {
         config.resolve.alias = {
             ...config.resolve?.alias,

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import 'components/Link/link.less';
+import 'gg-ukit/components/Link/link.less';
 
 export enum LinkType {
     Secondary = 'secondary',

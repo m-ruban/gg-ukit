@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
-import 'components/Column/column.less';
+import 'gg-ukit/components/Column/column.less';
 
 interface ColumnProps {
     l?: number;

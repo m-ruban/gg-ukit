@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import 'components/Icon/IconWrapper.less';
+import 'gg-ukit/components/Icon/IconWrapper.less';
 
 type scaleKinds = 1 | 2;
 

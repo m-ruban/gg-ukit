@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, RefObject, useRef, useState, useCallback, useEffect, useMemo } from 'react';
 import classnames from 'classnames';
 import Arrows from 'components/Slider/Arrows';
-import 'components/Slider/slider.less';
+import 'gg-ukit/components/Slider/slider.less';
 
 interface Slide {
     view: ReactNode;

@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import 'components/Paragraph/paragraph.less';
+import 'gg-ukit/components/Paragraph/paragraph.less';
 
 interface ParagraphProps {
     children: ReactNode;

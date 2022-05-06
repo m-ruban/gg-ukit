@@ -3,7 +3,7 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import Colors from 'modules/colors';
 import Image, { BasicImageProps } from 'components/Image';
 import Supports from 'modules/support';
-import 'components/Image/hoveredImage.less';
+import 'gg-ukit/components/Image/hoveredImage.less';
 
 export interface HoveredImageProps extends BasicImageProps {
     note?: string;

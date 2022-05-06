@@ -19,6 +19,18 @@ const DocsPage = () => (
 export default {
     title: 'Image/Basic Image',
     component: Image,
+    argTypes: {
+        src: {
+            table: {
+                disable: true,
+            },
+        },
+        alt: {
+            table: {
+                disable: true,
+            },
+        },
+    },
     parameters: {
         docs: {
             page: DocsPage,
