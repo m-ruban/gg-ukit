@@ -6,13 +6,7 @@ const height = 24;
 
 const RemoteAlt: FC<IconProps> = ({ color, scale = 1 }) => (
     <IconWrapper scale={scale}>
-        <svg
-            width={width * scale}
-            height={height * scale}
-            viewBox={`0 0 ${width * scale} ${height * scale}`}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width={width * scale} height={height * scale} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M11 9C11 9.55228 10.5523 10 10 10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8C10.5523 8 11 8.44772 11 9Z"
                 style={{ transform: `scale(${scale})` }}

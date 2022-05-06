@@ -11,7 +11,7 @@
         "typeRoots" : ["node_modules/@types"],
         "esModuleInterop": true,
         "paths": {
-            "root/*": ["./src/*"],
+            "gg-ukit/*": ["./src/*"],
             "components/*": ["./src/components/*"],
             "stories/*": ["./src/stories/*"],
             "modules/*": ["./src/modules/*"]

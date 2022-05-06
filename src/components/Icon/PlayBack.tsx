@@ -6,13 +6,7 @@ const height = 24;
 
 const PlayBack: FC<IconProps> = ({ color, scale = 1 }) => (
     <IconWrapper scale={scale}>
-        <svg
-            width={width * scale}
-            height={height * scale}
-            viewBox={`0 0 ${width * scale} ${height * scale}`}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width={width * scale} height={height * scale} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M13 8.12075V15.8793C13 16.6064 12.5565 17 12.0311 17C11.765 17 11.533 16.9133 11.2669 16.7665L4.67551 12.9706C4.21152 12.7038 4 12.3836 4 11.9967C4 11.6164 4.21152 11.2962 4.67551 11.0294L11.2669 7.24016C11.5398 7.08672 11.765 7 12.0311 7C12.5633 7 13 7.3936 13 8.12075Z"
                 style={{ transform: `scale(${scale})` }}

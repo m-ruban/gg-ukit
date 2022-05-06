@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
-import 'components/Button/button.less';
+import 'gg-ukit/components/Button/button.less';
 
 export enum ButtonKind {
     Secondary = 'secondary',

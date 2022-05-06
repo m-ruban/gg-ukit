@@ -6,13 +6,7 @@ const height = 24;
 
 const Decline: FC<IconProps> = ({ color, scale = 1 }) => (
     <IconWrapper scale={scale}>
-        <svg
-            width={width * scale}
-            height={height * scale}
-            viewBox={`0 0 ${width * scale} ${height * scale}`}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width={width * scale} height={height * scale} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M5 5L12 12M19 19L12 12M12 12L19 5L5 19"
                 style={{ transform: `scale(${scale})` }}

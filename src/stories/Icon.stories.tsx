@@ -140,6 +140,7 @@ import Time from 'components/Icon/Time';
 import SearchAlt from 'components/Icon/SearchAlt';
 import Voice from 'components/Icon/Voice';
 import Trash from 'components/Icon/Trash';
+import TrashAlt from 'components/Icon/TrashAlt';
 
 const IconList = (args) => (
     <>
@@ -281,6 +282,7 @@ const IconList = (args) => (
         <SearchAlt {...args} />
         <Voice {...args} />
         <Trash {...args} />
+        <TrashAlt {...args} />
     </>
 );
 

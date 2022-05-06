@@ -6,13 +6,7 @@ const height = 24;
 
 const SmartHomeWifi: FC<IconProps> = ({ color, scale = 1 }) => (
     <IconWrapper scale={scale}>
-        <svg
-            width={width * scale}
-            height={height * scale}
-            viewBox={`0 0 ${width * scale} ${height * scale}`}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width={width * scale} height={height * scale} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17C12.5523 17 13 17.4477 13 18Z"
                 style={{ transform: `scale(${scale})` }}

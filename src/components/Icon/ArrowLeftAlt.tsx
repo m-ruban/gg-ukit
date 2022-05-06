@@ -6,13 +6,7 @@ const height = 24;
 
 const ArrowLeftAlt: FC<IconProps> = ({ color, scale = 1 }) => (
     <IconWrapper scale={scale}>
-        <svg
-            width={width * scale}
-            height={height * scale}
-            viewBox={`0 0 ${width * scale} ${height * scale}`}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width={width * scale} height={height * scale} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M19 12H5M5 12L11 18M5 12L11 6"
                 style={{ transform: `scale(${scale})` }}

@@ -6,13 +6,7 @@ const height = 24;
 
 const Add: FC<IconProps> = ({ color, scale = 1 }) => (
     <IconWrapper scale={scale}>
-        <svg
-            width={width * scale}
-            height={height * scale}
-            viewBox={`0 0 ${width * scale} ${height * scale}`}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width={width * scale} height={height * scale} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 style={{ transform: `scale(${scale})` }}
                 d="M12 12V4M12 12V20M12 12H20M12 12H4"
