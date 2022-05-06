@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
-import Link from 'components/Link';
-import { LinkType } from 'components/Link';
-import ArrowRight from 'components/Icon/ArrowRight';
-import HomeAlt from 'components/Icon/HomeAlt';
-import Colors from 'modules/colors';
+import Link, { LinkType } from 'gg-ukit/components/Link';
+import ArrowRight from 'gg-ukit/components/Icon/ArrowRight';
+import HomeAlt from 'gg-ukit/components/Icon/HomeAlt';
+import Colors from 'gg-ukit/modules/colors';
 import 'gg-ukit/components/Breadcrumbs/breadcrumbs.less';
 
 interface BreadcrumbProp {
