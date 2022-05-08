@@ -1,5 +1,5 @@
 import React from 'react';
-import InputComponent, { InputKind } from 'components/Input';
+import InputComponent, { InputKind } from 'gg-ukit/components/Input';
 
 export const DefaultInput = (args) => <InputComponent {...args} type="text" />;
 DefaultInput.args = {

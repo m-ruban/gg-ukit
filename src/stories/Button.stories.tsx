@@ -1,7 +1,7 @@
 import React from 'react';
-import ButtonComponent, { ButtonKind } from 'components/Button';
-import Colors from 'modules/colors';
-import ArrowLeftAlt2 from 'components/Icon/ArrowLeftAlt2';
+import ButtonComponent, { ButtonKind } from 'gg-ukit/components/Button';
+import Colors from 'gg-ukit/modules/colors';
+import ArrowLeftAlt2 from 'gg-ukit/components/Icon/ArrowLeftAlt2';
 
 export const Button = (args) => <ButtonComponent {...args}>Click</ButtonComponent>;
 

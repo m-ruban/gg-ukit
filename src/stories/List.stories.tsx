@@ -1,5 +1,5 @@
 import React from 'react';
-import ListComponent from 'components/List';
+import ListComponent from 'gg-ukit/components/List';
 
 export const List = (args) => (
     <ListComponent {...args}>

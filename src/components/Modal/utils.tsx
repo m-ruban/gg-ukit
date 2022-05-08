@@ -1,4 +1,4 @@
-import Supports from 'modules/support';
+import Supports from 'gg-ukit/modules/support';
 
 enum NoscrollCssClasses {
     General = 'gg-modal-no-scroll',

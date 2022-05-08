@@ -1,7 +1,7 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import Paragraph from 'components/Paragraph';
-import ColumnComponent from 'components/Column';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import Paragraph from 'gg-ukit/components/Paragraph';
+import ColumnComponent from 'gg-ukit/components/Column';
 
 export const Column = (args) => (
     <ColumnComponent {...args}>

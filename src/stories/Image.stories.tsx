@@ -1,8 +1,8 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import Column from 'components/Column';
-import ColumnsWrapper from 'components/ColumnsWrapper';
-import Image from 'components/Image';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import Column from 'gg-ukit/components/Column';
+import ColumnsWrapper from 'gg-ukit/components/ColumnsWrapper';
+import Image from 'gg-ukit/components/Image';
 
 export const BasicImage = (args) => (
     <ColumnsWrapper>

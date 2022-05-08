@@ -1,8 +1,8 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import Paragraph from 'components/Paragraph';
-import ColumnsWrapperComponent from 'components/ColumnsWrapper';
-import Column from 'components/Column';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import Paragraph from 'gg-ukit/components/Paragraph';
+import ColumnsWrapperComponent from 'gg-ukit/components/ColumnsWrapper';
+import Column from 'gg-ukit/components/Column';
 
 export const Wrapper = () => (
     <ColumnsWrapperComponent>

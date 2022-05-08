@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Image, { BasicImageProps } from 'components/Image';
-import ColumnsWrapper from 'components/ColumnsWrapper';
-import Column from 'components/Column';
-import Paragraph from 'components/Paragraph';
-import Modal from 'components/Modal';
-import HoveredImage from 'components/Image/HoveredImage';
-import SearchAdd from 'components/Icon/SearchAdd';
+import Image, { BasicImageProps } from 'gg-ukit/components/Image';
+import ColumnsWrapper from 'gg-ukit/components/ColumnsWrapper';
+import Column from 'gg-ukit/components/Column';
+import Paragraph from 'gg-ukit/components/Paragraph';
+import Modal from 'gg-ukit/components/Modal';
+import HoveredImage from 'gg-ukit/components/Image/HoveredImage';
+import SearchAdd from 'gg-ukit/components/Icon/SearchAdd';
 
-import SliderComponent from 'components/Slider';
+import SliderComponent from 'gg-ukit/components/Slider';
 
 const slideStyleExample = { height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' };
 export const DefaultSlider = (args) => (

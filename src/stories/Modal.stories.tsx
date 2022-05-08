@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Paragraph from 'components/Paragraph';
-import ModalComponent from 'components/Modal';
-import Button, { ButtonKind } from 'components/Button';
+import Paragraph from 'gg-ukit/components/Paragraph';
+import ModalComponent from 'gg-ukit/components/Modal';
+import Button, { ButtonKind } from 'gg-ukit/components/Button';
 
 export const Modal = () => {
     const [show, setShow] = useState<boolean>(false);

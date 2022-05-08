@@ -1,6 +1,6 @@
 import React from 'react';
-import TooltipComponent from 'components/Tooltip';
-import Paragraph from 'components/Paragraph';
+import TooltipComponent from 'gg-ukit/components/Tooltip';
+import Paragraph from 'gg-ukit/components/Paragraph';
 
 export const Tooltip = (args) => (
     <Paragraph>

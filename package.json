@@ -1,11 +1,12 @@
 {
   "name": "gg-ukit",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "gg-ukit",
   "license": "MIT",
   "repository": "m-ruban/gg-ukit",
   "scripts": {
-    "build": "gulp clean && gulp lint && gulp raw-copy && gulp js-build && cp package.json build",
+    "clean": "gulp clean",
+    "build": "gulp lint && gulp raw-copy && gulp js-build && cp package.json build",
     "publish-pkg": "cd build && npm publish && wait",
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "storybook": "start-storybook -p 6006 -s ./public/,./src/styles/woff",

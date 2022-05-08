@@ -1,8 +1,8 @@
 import React, { FC, ReactNode, useState, useRef } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
-import Colors from 'modules/colors';
-import Image, { BasicImageProps } from 'components/Image';
-import Supports from 'modules/support';
+import Colors from 'gg-ukit/modules/colors';
+import Image, { BasicImageProps } from 'gg-ukit/components/Image';
+import Supports from 'gg-ukit/modules/support';
 import 'gg-ukit/components/Image/hoveredImage.less';
 
 export interface HoveredImageProps extends BasicImageProps {

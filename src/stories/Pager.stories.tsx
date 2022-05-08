@@ -1,5 +1,5 @@
 import React from 'react';
-import PagerComponent from 'components/Pager';
+import PagerComponent from 'gg-ukit/components/Pager';
 
 export const Pager = (args) => <PagerComponent {...args} />;
 Pager.args = {};

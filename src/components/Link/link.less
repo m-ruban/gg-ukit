@@ -6,47 +6,40 @@
     font-style: normal;
     font-size: @primary-font-size;
     color: @primary;
-    transition: color 150ms ease-out;
-}
+    transition: color 150ms ease-out, border-bottom-color 150ms ease-out;
+    border-bottom: 1px solid transparent;
 
-.gg-link:hover {
-    color: @primary-minor;
-    text-decoration: underline;
-    cursor: pointer;
-}
+    &:hover {
+        color: @primary-minor;
+        cursor: pointer;
+        border-color: @primary-minor;
+    }
 
-.gg-link:visited {
-    color: #b41863;
-}
-
-.gg-link:active {
-    color: #85142a;
+    &:active {
+        color: #85142a;
+        border-color: #85142a;
+    }
 }
 
 .gg-link_secondary {
     color: @secondary;
-}
 
-.gg-link_secondary:visited {
-    color: #a5a5a5;
-}
-
-.gg-link_secondary:active {
-    color: @secondary-dimmed;
+    &:active {
+        color: @secondary-dimmed;
+        border-color: @secondary-dimmed;
+    }
 }
 
 .gg-link_promo {
     color: @promo;
-}
 
-.gg-link_promo:hover {
-    color: @promo;
-}
+    &:hover {
+        color: @promo;
+        border-color: @promo;
+    }
 
-.gg-link_promo:visited {
-    color: #6b7d8d;
-}
-
-.gg-link_promo:active {
-    color: @secondary-dimmed;
+    &:active {
+        color: @secondary-dimmed;
+        border-color: @secondary-dimmed;
+    }
 }

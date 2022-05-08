@@ -1,9 +1,9 @@
 import React, { FC, ReactNode, useState } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition';
-import { H3 } from 'components/Header';
-import ArrowDown from 'components/Icon/ArrowDown';
-import ArrowUp from 'components/Icon/ArrowUp';
-import Colors from 'modules/colors';
+import { H3 } from 'gg-ukit/components/Header';
+import ArrowDown from 'gg-ukit/components/Icon/ArrowDown';
+import ArrowUp from 'gg-ukit/components/Icon/ArrowUp';
+import Colors from 'gg-ukit/modules/colors';
 import 'gg-ukit/components/Collapse/collapse.less';
 
 interface CollapseProps {

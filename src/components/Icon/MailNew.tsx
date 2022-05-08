@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import IconWrapper, { IconProps } from 'components/Icon/IconWrapper';
+import IconWrapper, { IconProps } from 'gg-ukit/components/Icon/IconWrapper';
 
 const width = 26;
 const height = 24;

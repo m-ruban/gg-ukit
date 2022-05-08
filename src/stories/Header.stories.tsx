@@ -1,8 +1,8 @@
 import React from 'react';
 
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import { H1 as Header1, H2 as Header2, H3 as Header3, H4 as Header4 } from 'components/Header';
-import { HeaderLine } from 'components/Header/BasicHeader';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import { H1 as Header1, H2 as Header2, H3 as Header3, H4 as Header4 } from 'gg-ukit/components/Header';
+import { HeaderLine } from 'gg-ukit/components/Header/BasicHeader';
 
 export const H1 = (args) => <Header1 {...args} />;
 H1.args = {

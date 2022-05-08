@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
-import 'components/Header/header.less';
+import 'gg-ukit/components/Header/header.less';
 
 export enum HeaderTag {
     H1 = 'h1',

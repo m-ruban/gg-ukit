@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import BasicHeader, { HeaderTag, HeaderType, HeaderLine } from 'components/Header/BasicHeader';
+import BasicHeader, { HeaderTag, HeaderType, HeaderLine } from 'gg-ukit/components/Header/BasicHeader';
 
 interface HeaderProps {
     title: string;

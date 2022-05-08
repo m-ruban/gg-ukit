@@ -1,7 +1,7 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import BreadcrumbsComponent from 'components/Breadcrumbs';
-import { LinkType } from 'components/Link';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import BreadcrumbsComponent from 'gg-ukit/components/Breadcrumbs';
+import { LinkType } from 'gg-ukit/components/Link';
 
 const links = [
     {

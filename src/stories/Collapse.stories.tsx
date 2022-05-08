@@ -1,9 +1,9 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import CollapseComponent from 'components/Collapse';
-import Paragraph from 'components/Paragraph';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import CollapseComponent from 'gg-ukit/components/Collapse';
+import Paragraph from 'gg-ukit/components/Paragraph';
 
-const TextExapmle = (
+const TextExample = (
     <>
         <Paragraph>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -17,12 +17,12 @@ const TextExapmle = (
     </>
 );
 
-export const BasicCollapse = (args) => <CollapseComponent {...args}>{TextExapmle}</CollapseComponent>;
+export const BasicCollapse = (args) => <CollapseComponent {...args}>{TextExample}</CollapseComponent>;
 BasicCollapse.args = {
     title: 'Lorem ipsum dolor sit amet',
 };
 
-export const OpenedCollapse = (args) => <CollapseComponent {...args}>{TextExapmle}</CollapseComponent>;
+export const OpenedCollapse = (args) => <CollapseComponent {...args}>{TextExample}</CollapseComponent>;
 OpenedCollapse.args = {
     title: 'Lorem ipsum dolor sit amet',
     defaultShow: true,

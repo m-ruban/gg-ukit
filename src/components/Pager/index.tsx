@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import Colors from 'modules/colors';
-import ArrowLeftAlt2 from 'components/Icon/ArrowLeftAlt2';
-import ArrowRightAlt2 from 'components/Icon/ArrowRightAlt2';
+import Colors from 'gg-ukit/modules/colors';
+import ArrowLeftAlt2 from 'gg-ukit/components/Icon/ArrowLeftAlt2';
+import ArrowRightAlt2 from 'gg-ukit/components/Icon/ArrowRightAlt2';
 import 'gg-ukit/components/Pager/pager.less';
 
 const PAGE_PARAM = 'page';

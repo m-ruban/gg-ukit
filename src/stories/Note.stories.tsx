@@ -1,6 +1,6 @@
 import React from 'react';
-import Paragraph from 'components/Paragraph';
-import NoteComponent from 'components/Note';
+import Paragraph from 'gg-ukit/components/Paragraph';
+import NoteComponent from 'gg-ukit/components/Note';
 
 export const Note = (args) => (
     <>

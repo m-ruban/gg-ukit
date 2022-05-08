@@ -1,12 +1,10 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import Paragraph from 'components/Paragraph';
-import Column from 'components/Column';
-import ColumnsWrapper from 'components/ColumnsWrapper';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import Paragraph from 'gg-ukit/components/Paragraph';
+import Column from 'gg-ukit/components/Column';
+import ColumnsWrapper from 'gg-ukit/components/ColumnsWrapper';
 
 import FramedImageComponent, { FramedImageKind } from 'components/Image/FramedImage';
-import Colors from 'modules/colors';
-import SearchAdd from 'components/Icon/SearchAdd';
 
 const TextExample = () => (
     <Paragraph>

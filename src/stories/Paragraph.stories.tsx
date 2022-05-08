@@ -1,6 +1,6 @@
 import React from 'react';
-import CustomDocsPage from 'stories/CustomDocsPage.utils';
-import ParagraphComponent from 'components/Paragraph';
+import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
+import ParagraphComponent from 'gg-ukit/components/Paragraph';
 
 export const Paragraph = (args) => (
     <ParagraphComponent {...args}>

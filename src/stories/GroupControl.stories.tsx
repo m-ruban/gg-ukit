@@ -1,9 +1,9 @@
 import React from 'react';
-import GroupControlComponent from 'components/GroupControl';
-import Input from 'components/Input';
-import Button, { ButtonKind } from 'components/Button';
-import Colors from 'modules/colors';
-import Search from 'components/Icon/Search';
+import GroupControlComponent from 'gg-ukit/components/GroupControl';
+import Input from 'gg-ukit/components/Input';
+import Button, { ButtonKind } from 'gg-ukit/components/Button';
+import Colors from 'gg-ukit/modules/colors';
+import Search from 'gg-ukit/components/Icon/Search';
 
 export const GroupControl = (args) => (
     <GroupControlComponent {...args}>
