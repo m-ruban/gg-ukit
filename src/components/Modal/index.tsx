@@ -1,9 +1,9 @@
 import React, { useRef, useCallback, memo, FC, ComponentPropsWithoutRef } from 'react';
 import ReactDOM from 'react-dom';
 import CSSTransition from 'react-transition-group/CSSTransition';
-import Colors from 'modules/colors';
-import Utils from 'components/Modal/utils';
-import Decline from 'components/Icon/Decline';
+import Colors from 'gg-ukit/modules/colors';
+import Utils from 'gg-ukit/components/Modal/utils';
+import Decline from 'gg-ukit/components/Icon/Decline';
 
 import 'gg-ukit/components/Modal/modal.less';
 

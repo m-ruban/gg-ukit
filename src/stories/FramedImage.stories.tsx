@@ -4,7 +4,7 @@ import Paragraph from 'gg-ukit/components/Paragraph';
 import Column from 'gg-ukit/components/Column';
 import ColumnsWrapper from 'gg-ukit/components/ColumnsWrapper';
 
-import FramedImageComponent, { FramedImageKind } from 'components/Image/FramedImage';
+import FramedImageComponent, { FramedImageKind } from 'gg-ukit/components/Image/FramedImage';
 
 const TextExample = () => (
     <Paragraph>
