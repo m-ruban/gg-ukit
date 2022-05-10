@@ -29,7 +29,7 @@ const Slider: FC<SliderProps> = ({ slides, note }) => {
     // scroll to selected preview
     useEffect(() => {
         if (showPreview) {
-            selectedSlide.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            selectedSlide.current.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
         }
     }, [showPreview, selected]);
 
