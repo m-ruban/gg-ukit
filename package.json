@@ -1,12 +1,12 @@
 {
   "name": "gg-ukit",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "gg-ukit",
   "license": "MIT",
   "repository": "m-ruban/gg-ukit",
   "scripts": {
     "clean": "gulp clean",
-    "build": "gulp clean && gulp lint && gulp raw-copy && gulp js-build && gulp copy-package",
+    "build": "gulp clean && gulp lint && gulp raw-copy && yarn types-compile && gulp js-build && gulp copy-package",
     "publish-pkg": "cd build && npm publish && wait",
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "ts-check": "tsc -p tsconfig.json --noEmit",

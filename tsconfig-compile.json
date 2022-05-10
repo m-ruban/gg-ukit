@@ -4,5 +4,5 @@
         "declaration": true,
         "emitDeclarationOnly": true
     },
-    "exclude": ["src/**/*.less"]
+    "exclude": ["src/components/*.less", "src/stories/*"]
 }
