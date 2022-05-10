@@ -4,8 +4,10 @@ const { jsBuild } = require('./task-build-js');
 const { stylelint } = require('./task-styles');
 const { clean } = require('./task-clean');
 const { rawCopy } = require('./task-raw-copy');
+const { copyPackage } = require('./task-copy-package');
 
 gulp.task('clean', clean);
 gulp.task('lint', gulp.parallel(lintJs, stylelint));
 gulp.task('js-build', jsBuild);
 gulp.task('raw-copy', rawCopy);
+gulp.task('copy-package', copyPackage);

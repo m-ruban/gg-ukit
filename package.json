@@ -6,7 +6,7 @@
   "repository": "m-ruban/gg-ukit",
   "scripts": {
     "clean": "gulp clean",
-    "build": "gulp clean && gulp lint && gulp raw-copy && gulp js-build && cp package.json build",
+    "build": "gulp clean && gulp lint && gulp raw-copy && gulp js-build && gulp copy-package",
     "publish-pkg": "cd build && npm publish && wait",
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "storybook": "start-storybook -p 6006 -s ./public/,./src/styles/woff",
@@ -53,6 +53,7 @@
     "gulp-babel": "~8.0.0",
     "gulp-cached": "~1.1.1",
     "gulp-eslint7": "~0.3.1",
+    "gulp-json-editor": "^2.5.6",
     "gulp-plumber": "~1.2.0",
     "gulp-sourcemaps": "~3.0.0",
     "gulp-stylelint": "13.0.0",
