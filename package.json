@@ -10,6 +10,7 @@
     "publish-pkg": "cd build && npm publish && wait",
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "ts-check": "tsc -p tsconfig.json --noEmit",
+    "types-compile": "tsc -p tsconfig-compile.json",
     "storybook": "start-storybook -p 6006 -s ./public/,./src/styles/woff",
     "build-storybook": "build-storybook -s ./public/,./src/styles/woff"
   },
