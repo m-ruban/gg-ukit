@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, memo, FC, ComponentPropsWithoutRef } from 'react';
+import React, { useRef, useCallback, memo, useState, useEffect, FC, ComponentPropsWithoutRef } from 'react';
 import ReactDOM from 'react-dom';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import Colors from 'gg-ukit/modules/colors';
@@ -24,6 +24,11 @@ const Modal: FC<ModalProps> = ({
     host,
     ...modalProps
 }) => {
+    const [isServer, setServer] = useState(true);
+    useEffect(() => {
+        setServer(false);
+    }, []);
+
     const isClosable = useRef(true);
     const handleClose = useCallback(() => {
         if (isClosable.current) {
@@ -39,6 +44,10 @@ const Modal: FC<ModalProps> = ({
     const setNonClosable = useCallback(() => {
         isClosable.current = false;
     }, []);
+
+    if (isServer) {
+        return null;
+    }
 
     return ReactDOM.createPortal(
         <CSSTransition
