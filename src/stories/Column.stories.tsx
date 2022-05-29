@@ -1,17 +1,14 @@
 import React from 'react';
 import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
-import Paragraph from 'gg-ukit/components/Paragraph';
+import ColumnsWrapper from 'gg-ukit/components/ColumnsWrapper';
 import ColumnComponent from 'gg-ukit/components/Column';
 
 export const Column = (args) => (
-    <ColumnComponent {...args}>
-        <Paragraph>
-            Карта игрового мира так же проста - центральный город, в котором расположена вся необходимая герою
-            инфраструктура и четыре большие локации расположены по четырём частям света. Каждый уровень имеет свой
-            дизайн и тематику - будь то северные горы, болота или затопленный город. В конце каждой локации есть босс,
-            который и даст вам необходимую часть ключа.
-        </Paragraph>
-    </ColumnComponent>
+    <ColumnsWrapper>
+        <ColumnComponent {...args}>
+            <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>test column</div>
+        </ColumnComponent>
+    </ColumnsWrapper>
 );
 
 Column.args = {
@@ -20,6 +17,141 @@ Column.args = {
     s: 6,
     xs: 4,
 };
+
+export const Columns = () => (
+    <div>
+        <ColumnsWrapper>
+            <ColumnComponent xs={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>xs</div>
+            </ColumnComponent>
+            <ColumnComponent xs={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>xs</div>
+            </ColumnComponent>
+            <ColumnComponent xs={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>xs</div>
+            </ColumnComponent>
+            <ColumnComponent xs={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>xs</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent xs={4}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>4 xs</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent s={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>s</div>
+            </ColumnComponent>
+            <ColumnComponent s={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>s</div>
+            </ColumnComponent>
+            <ColumnComponent s={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>s</div>
+            </ColumnComponent>
+            <ColumnComponent s={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>s</div>
+            </ColumnComponent>
+            <ColumnComponent s={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>s</div>
+            </ColumnComponent>
+            <ColumnComponent s={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>s</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent s={6}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>6 s</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+            <ColumnComponent m={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>m</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent m={12}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>12 m</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+            <ColumnComponent l={1}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>l</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+        <ColumnsWrapper>
+            <ColumnComponent l={12}>
+                <div style={{ color: '#FFFFFF', border: '1px solid #FFFFFF' }}>12 l</div>
+            </ColumnComponent>
+        </ColumnsWrapper>
+    </div>
+);
 
 const DocsPage = () => (
     <CustomDocsPage
@@ -61,6 +193,7 @@ export default {
         },
     },
     parameters: {
+        layout: 'fullscreen',
         docs: {
             page: DocsPage,
         },

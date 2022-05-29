@@ -3,24 +3,22 @@
 
 .gg-columns-wrapper {
     margin: 0 auto;
-    padding: 0 15px;
+    min-width: @page-min-width;
     max-width: @column-counts-xs * @column-width-xs;
-}
 
-@media @screen-s {
-    .gg-columns-wrapper {
+    @media @screen-gt-xs {
+        padding: 0 @column-padding;
+    }
+
+    @media @screen-s {
         max-width: @column-counts-s * @column-width-s + (@column-counts-s * 2 * @column-padding);
     }
-}
 
-@media @screen-m {
-    .gg-columns-wrapper {
+    @media @screen-m {
         max-width: @column-counts-m * @column-width-m + (@column-counts-m * 2 * @column-padding);
     }
-}
 
-@media @screen-gt-m {
-    .gg-columns-wrapper {
+    @media @screen-gt-m {
         max-width: @column-counts-l * @column-width-l + (@column-counts-l * 2 * @column-padding);
     }
 }
