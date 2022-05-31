@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, memo, useState, useEffect, FC, ComponentPropsWithoutRef } from 'react';
+import React, { useRef, useCallback, memo, useState, useEffect, FC, ComponentPropsWithoutRef, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import Colors from 'gg-ukit/modules/colors';
@@ -9,6 +9,7 @@ import 'gg-ukit/components/Modal/modal.less';
 
 interface ModalProps extends ComponentPropsWithoutRef<'div'> {
     onClose: () => void;
+    children: ReactNode;
     backgroundClick?: boolean;
     visible?: boolean;
     host?: HTMLElement;

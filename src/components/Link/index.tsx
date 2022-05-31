@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
 import 'gg-ukit/components/Link/link.less';
 
@@ -10,6 +10,7 @@ export enum LinkType {
 interface LinkProp {
     href: string;
     type?: LinkType;
+    children: ReactNode;
 }
 
 const Link: FC<LinkProp> = ({ href, type, children, ...props }) => (
