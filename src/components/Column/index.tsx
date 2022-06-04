@@ -7,13 +7,15 @@ interface ColumnProps {
     m?: number;
     s?: number;
     xs?: number;
+    container?: boolean;
     children: ReactNode;
 }
 
-const Column: FC<ColumnProps> = ({ l = 12, m = 12, s = 6, xs = 4, children }) => (
+const Column: FC<ColumnProps> = ({ l = 12, m = 12, s = 6, xs = 4, container, children }) => (
     <div
         className={classnames(
             'gg-column',
+            { 'gg-column_container': container },
             { [`gg-column-xs_${xs}`]: xs },
             { [`gg-column-s_${s}`]: s },
             { [`gg-column-m_${m}`]: m },
