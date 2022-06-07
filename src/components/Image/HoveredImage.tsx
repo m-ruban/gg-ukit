@@ -64,6 +64,9 @@ const HoveredImage: FC<HoveredImageProps> = ({
                 onTouchStart={() => {
                     setHover(true);
                 }}
+                onTouchEnd={() => {
+                    setHover(false);
+                }}
                 onMouseEnter={() => {
                     if (!Supports.mobile()) {
                         setHover(true);
