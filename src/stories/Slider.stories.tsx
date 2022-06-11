@@ -64,10 +64,15 @@ export const ImageSlider = (args) => {
                                 view: (
                                     <HoveredImage
                                         {...image}
-                                        hoverView={<SearchAdd color="#DB9D39" scale={2} />}
-                                        onHoverViewClick={() => {
-                                            setZoomImg({ show: true, img: { ...image } });
-                                        }}
+                                        hoverView={
+                                            <div
+                                                onClick={() => {
+                                                    setZoomImg({ show: true, img: { ...image } });
+                                                }}
+                                            >
+                                                <SearchAdd color="#DB9D39" scale={2} />
+                                            </div>
+                                        }
                                     />
                                 ),
                                 preview: <Image {...image} />,

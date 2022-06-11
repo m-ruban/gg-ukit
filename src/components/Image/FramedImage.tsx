@@ -9,10 +9,11 @@ export enum FramedImageKind {
 }
 
 interface FramedImageProps extends HoveredImageProps {
+    note: string;
     kind?: FramedImageKind;
 }
 
-const FramedImage: FC<FramedImageProps> = ({ src, alt, kind, note, lineColor, hoverView, onHoverViewClick }) => {
+const FramedImage: FC<FramedImageProps> = ({ src, alt, kind, note, hoverView }) => {
     return (
         <div
             className={classnames(
@@ -21,14 +22,7 @@ const FramedImage: FC<FramedImageProps> = ({ src, alt, kind, note, lineColor, ho
                 { [`gg-img-wrapper_${kind}`]: kind }
             )}
         >
-            <HoveredImage
-                src={src}
-                alt={alt}
-                note={note}
-                lineColor={lineColor}
-                hoverView={hoverView}
-                onHoverViewClick={onHoverViewClick}
-            />
+            <HoveredImage src={src} alt={alt} noted={Boolean(note)} hoverView={hoverView} />
             {note && <div className="gg-img-note">{note}</div>}
         </div>
     );

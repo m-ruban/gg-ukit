@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 import 'gg-ukit/components/Image/image.less';
 
@@ -9,25 +9,16 @@ export interface BasicImageProps extends React.ImgHTMLAttributes<HTMLImageElemen
 
 interface ImageProps extends BasicImageProps {
     wrapped?: boolean;
-    note?: string;
-    hover?: boolean;
+    noted?: boolean;
 }
 
-const Image = forwardRef<HTMLImageElement, ImageProps>(({ src, alt, wrapped, note, hover, ...props }, forwardRef) => (
+const Image: FC<ImageProps> = ({ src, alt, wrapped, noted, ...props }) => (
     <img
-        ref={forwardRef}
-        className={classnames(
-            'gg-img',
-            { 'gg-img_wrapped': wrapped },
-            { 'gg-img_noted': note },
-            { 'gg-img_hovered': hover }
-        )}
+        className={classnames('gg-img', { 'gg-img_wrapped': wrapped }, { 'gg-img_noted': noted })}
         src={src}
         alt={alt}
         {...props}
     />
-));
-
-Image.displayName = 'Image';
+);
 
 export default Image;

@@ -99,11 +99,6 @@ export default {
                 type: 'text',
             },
         },
-        hoverView: {
-            table: {
-                disable: true,
-            },
-        },
         src: {
             table: {
                 disable: true,

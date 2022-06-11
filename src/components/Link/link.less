@@ -2,18 +2,33 @@
 @import '../../styles/font-sizes';
 
 .gg-link {
+    position: relative;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-size: @primary-font-size;
     color: @primary;
-    transition: color 150ms ease-out, border-bottom-color 150ms ease-out;
+    transition: color 100ms ease-out;
     border-bottom: 1px solid transparent;
     text-decoration: none;
+
+    &::after {
+        border-bottom: 1px solid @primary-minor;
+        left: 0;
+        bottom: 0;
+        content: ' ';
+        position: absolute;
+        right: 0;
+        transform: scaleX(0);
+        transition: transform 100ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    }
 
     &:hover {
         color: @primary-minor;
         cursor: pointer;
-        border-color: @primary-minor;
+
+        &:after {
+            transform: scaleX(1);
+        }
     }
 
     &:active {
@@ -34,9 +49,12 @@
 .gg-link_promo {
     color: @promo;
 
+    &::after {
+        border-color: @promo;
+    }
+
     &:hover {
         color: @promo;
-        border-color: @promo;
     }
 
     &:active {

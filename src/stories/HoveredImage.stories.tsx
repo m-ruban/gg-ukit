@@ -4,7 +4,10 @@ import Column from 'gg-ukit/components/Column';
 import ColumnsWrapper from 'gg-ukit/components/ColumnsWrapper';
 import Image from 'gg-ukit/components/Image';
 import SearchAdd from 'gg-ukit/components/Icon/SearchAdd';
+import Search from 'gg-ukit/components/Icon/Search';
 import Modal from 'gg-ukit/components/Modal';
+import Button, { ButtonKind } from 'gg-ukit/components/Button';
+import Colors from 'modules/colors';
 
 import HoveredImageComponent from 'components/Image/HoveredImage';
 
@@ -38,10 +41,16 @@ export const ModalImage = () => {
                     <HoveredImageComponent
                         src="/assets/example_preload.jpeg"
                         alt="test imag"
-                        hoverView={<SearchAdd color="#DB9D39" scale={2} />}
-                        onHoverViewClick={() => {
-                            setShow(!show);
-                        }}
+                        hoverView={
+                            <Button
+                                kind={ButtonKind.Promo}
+                                onClick={() => {
+                                    setShow(!show);
+                                }}
+                                icon={<Search color={Colors.Secondary} />}
+                                rounded
+                            />
+                        }
                     />
                 </Column>
             </ColumnsWrapper>
@@ -90,10 +99,6 @@ export default {
             control: {
                 type: 'text',
             },
-        },
-        onHoverViewClick: {
-            description: 'Обработчик события click на hoverView',
-            action: 'clicked',
         },
     },
     parameters: {
