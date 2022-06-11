@@ -1,33 +1,28 @@
 @import '../../styles/colors';
 @import '../../styles/font-sizes';
 
+@border-width: 1px;
+
 .gg-link {
-    position: relative;
+    display: inline;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-size: @primary-font-size;
     color: @primary;
-    transition: color 100ms ease-out;
-    border-bottom: 1px solid transparent;
     text-decoration: none;
 
-    &::after {
-        border-bottom: 1px solid @primary-minor;
-        left: 0;
-        bottom: 0;
-        content: ' ';
-        position: absolute;
-        right: 0;
-        transform: scaleX(0);
-        transition: transform 100ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-    }
+    background-image: linear-gradient(@primary-minor, @primary-minor);
+    background-size: 0 @border-width;
+    background-repeat: no-repeat;
+    transition: background-size 150ms;
+    background-position: 50% 100%;
 
     &:hover {
-        color: @primary-minor;
         cursor: pointer;
+        color: @primary-minor;
 
-        &::after {
-            transform: scaleX(1);
+        &:hover {
+            background-size: 100% @border-width;
         }
     }
 
@@ -48,10 +43,7 @@
 
 .gg-link_promo {
     color: @promo;
-
-    &::after {
-        border-color: @promo;
-    }
+    background-image: linear-gradient(@promo, @promo);
 
     &:hover {
         color: @promo;
