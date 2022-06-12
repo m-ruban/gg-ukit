@@ -6,32 +6,34 @@
     font-family: Montserrat, sans-serif;
     padding: 10px;
     border: none;
-    background-color: #bd1c3d;
     font-size: @primary-font-size;
     font-weight: @bold-font-weight;
     color: @secondary;
-    transition: background-color 100ms ease-out;
     line-height: 1;
 
+    background-color: #bd1c3d;
+    background-image: linear-gradient(#ac1c3a, #ac1c3a);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 150ms;
+    background-position: 0 100%;
+
     &:hover {
-        background-color: #ac1c3a;
+        background-size: 100% 100%;
     }
 
     &:active {
-        background-color: #88162e;
+        background-image: linear-gradient(#88162e, #88162e);
     }
 }
 
 .gg-button_secondary {
     background-color: @secondary;
     color: @tertiary-dimmed;
-
-    &:hover {
-        background-color: @secondary-dimmed;
-    }
+    background-image: linear-gradient(@secondary-dimmed, @secondary-dimmed);
 
     &:active {
-        background-color: #c1c1c1;
+        background-image: linear-gradient(#c1c1c1, #c1c1c1);
     }
 }
 
@@ -41,13 +43,10 @@
 
 .gg-button_promo {
     background-color: #475361;
-
-    &:hover {
-        background-color: @tertiary-dimmed;
-    }
+    background-image: linear-gradient(@tertiary-dimmed, @tertiary-dimmed);
 
     &:active {
-        background-color: @tertiary;
+        background-image: linear-gradient(@tertiary, @tertiary);
     }
 }
 
