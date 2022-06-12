@@ -11,33 +11,30 @@
     color: @primary;
     text-decoration: none;
 
-    background-image: linear-gradient(@primary-minor, @primary-minor);
+    background-image: linear-gradient(@primary, @primary);
     background-size: 0 @border-width;
     background-repeat: no-repeat;
     transition: background-size 150ms;
-    background-position: 50% 100%;
+    background-position: 0 100%;
 
     &:hover {
         cursor: pointer;
-        color: @primary-minor;
-
-        &:hover {
-            background-size: 100% @border-width;
-        }
+        background-size: 100% @border-width;
     }
 
     &:active {
         color: #85142a;
-        border-color: #85142a;
+        background-image: linear-gradient(#85142a, #85142a);
     }
 }
 
 .gg-link_secondary {
     color: @secondary;
+    background-image: linear-gradient(@secondary, @secondary);
 
     &:active {
         color: @secondary-dimmed;
-        border-color: @secondary-dimmed;
+        background-image: linear-gradient(@secondary-dimmed, @secondary-dimmed);
     }
 }
 
@@ -51,6 +48,6 @@
 
     &:active {
         color: @secondary-dimmed;
-        border-color: @secondary-dimmed;
+        background-image: linear-gradient(@secondary-dimmed, @secondary-dimmed);
     }
 }
