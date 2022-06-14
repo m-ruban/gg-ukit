@@ -5,7 +5,7 @@ import ArrowLeftAlt2 from 'gg-ukit/components/Icon/ArrowLeftAlt2';
 import ArrowRightAlt2 from 'gg-ukit/components/Icon/ArrowRightAlt2';
 import 'gg-ukit/components/Pager/pager.less';
 
-import Link, { LinkType } from 'components/Link';
+import Link, { LinkType } from 'gg-ukit/components/Link';
 
 export const PAGE_TEMPLATE = '%PAGE%';
 
