@@ -2,7 +2,7 @@ import React, { FC, ReactNode, useState, useRef, useEffect, useCallback } from '
 import classnames from 'classnames';
 import 'gg-ukit/components/Tooltip/tooltip.less';
 
-interface TooltipProps {
+export interface TooltipProps {
     children: ReactNode;
     view: ReactNode;
 }

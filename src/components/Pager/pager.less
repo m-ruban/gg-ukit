@@ -2,69 +2,71 @@
 @import '../../styles/screen';
 
 @pager-margin: 10px;
-
-// mixins
-.pager-item() {
-    font-family: 'Open Sans', sans-serif;
-    color: @secondary;
-    font-size: 28px;
-    margin-left: @pager-margin;
-}
-
-.pager-item-hovered() {
-    &:hover {
-        cursor: pointer;
-        color: @primary;
-    }
-}
+@pager-font-size: 32px;
 
 // containers
 .gg-pager {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    @media @screen-gt-xs {
-        justify-content: normal;
-    }
 }
 
 .gg-pager-extended-list {
     display: none;
 
     @media @screen-gt-xs {
-        display: block;
+        display: flex;
     }
+}
+
+.gg-pager-middle {
+    display: flex;
 }
 
 // items and arrows
 .gg-pager-item {
-    .pager-item();
-    .pager-item-hovered();
+    margin-left: 15px;
 
-    text-decoration: none;
-}
+    a {
+        font-size: @pager-font-size;
+    }
 
-.gg-pager-item_selected {
-    border: 3px solid @secondary;
-    border-radius: 20px;
-    padding-left: 8px;
-    padding-right: 8px;
+    &:first-of-type {
+        margin-left: 0;
+    }
 
-    &:hover {
-        border-color: @primary;
+    @media @screen-gt-xs {
+        margin-left: @pager-margin;
     }
 }
 
-.gg-pager-arrow {
-    cursor: pointer;
-    display: flex;
+.gg-pager-item_selected a {
+    background-size: 100% 1px;
+
+    &:hover {
+        background-size: 100% 1px;
+    }
 }
 
-.gg-pager-arrow_right {
-    margin-left: @pager-margin;
+.gg-pager-arrow-left {
+    margin-right: @pager-margin * 2;
+
+    @media @screen-gt-xs {
+        margin-right: @pager-margin;
+    }
+}
+
+.gg-pager-arrow-right {
+    margin-left: @pager-margin * 2;
+
+    @media @screen-gt-xs {
+        margin-left: @pager-margin;
+    }
 }
 
 .gg-pager-reduction {
-    .pager-item();
+    font-family: 'Open Sans', sans-serif;
+    color: @secondary;
+    font-size: @pager-font-size;
+    margin-left: @pager-margin;
+    margin-right: @pager-margin;
 }

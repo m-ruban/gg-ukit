@@ -7,7 +7,7 @@ import Decline from 'gg-ukit/components/Icon/Decline';
 
 import 'gg-ukit/components/Modal/modal.less';
 
-interface ModalProps extends ComponentPropsWithoutRef<'div'> {
+export interface ModalProps extends ComponentPropsWithoutRef<'div'> {
     onClose: () => void;
     children: ReactNode;
     backgroundClick?: boolean;

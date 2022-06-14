@@ -4,7 +4,7 @@ import Colors from 'gg-ukit/modules/colors';
 import ArrowLeftAlt2 from 'gg-ukit/components/Icon/ArrowLeftAlt2';
 import ArrowRightAlt2 from 'gg-ukit/components/Icon/ArrowRightAlt2';
 
-interface ArrowsProps {
+export interface ArrowsProps {
     prevSlide: () => void;
     nextSlide: () => void;
 }

@@ -8,7 +8,7 @@ export interface IconProps {
     color: string;
 }
 
-interface IconWrapperProps {
+export interface IconWrapperProps {
     children: ReactNode;
     scale: scaleKinds;
 }

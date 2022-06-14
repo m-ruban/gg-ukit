@@ -8,7 +8,7 @@ export enum ButtonKind {
     Promo = 'promo',
 }
 
-interface ButtonProps {
+export interface ButtonProps {
     children?: ReactNode;
     icon?: ReactNode;
     onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;

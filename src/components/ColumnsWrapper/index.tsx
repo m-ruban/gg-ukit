@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import 'gg-ukit/components/ColumnsWrapper/columnsWrapper.less';
 
-interface ColumnsWrapperProps {
+export interface ColumnsWrapperProps {
     children: ReactNode;
 }
 

@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import 'gg-ukit/components/List/list.less';
 
-interface ListProps {
+export interface ListProps {
     children: ReactNode;
 }
 

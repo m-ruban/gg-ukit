@@ -23,7 +23,7 @@ export enum HeaderLine {
 
 const LABEL_SEPARATOR = ' ';
 
-interface BasicHeaderProps {
+export interface BasicHeaderProps {
     title: string;
     Tag: HeaderTag;
     type: HeaderType;

@@ -3,12 +3,12 @@ import classnames from 'classnames';
 import Arrows from 'gg-ukit/components/Slider/Arrows';
 import 'gg-ukit/components/Slider/slider.less';
 
-interface Slide {
+export interface Slide {
     view: ReactNode;
     preview?: ReactNode;
 }
 
-interface SliderProps {
+export interface SliderProps {
     slides: Slide[];
     note?: string;
 }

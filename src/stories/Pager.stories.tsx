@@ -50,16 +50,9 @@ export default {
                 type: 'boolean',
             },
         },
-        pathname: {
+        urlTemplate: {
             description: 'pathname',
-            defaultValue: 'https://gamespirit.org',
-            control: {
-                type: 'text',
-            },
-        },
-        search: {
-            description: 'search',
-            defaultValue: '/page?filter=test',
+            defaultValue: 'http://gamespirit.org/reviews/%PAGE%/',
             control: {
                 type: 'text',
             },

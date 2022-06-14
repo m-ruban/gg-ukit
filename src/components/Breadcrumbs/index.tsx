@@ -5,12 +5,12 @@ import HomeAlt from 'gg-ukit/components/Icon/HomeAlt';
 import Colors from 'gg-ukit/modules/colors';
 import 'gg-ukit/components/Breadcrumbs/breadcrumbs.less';
 
-interface BreadcrumbProp {
+export interface BreadcrumbProp {
     title: string;
     href: string;
 }
 
-interface BreadcrumbsProp {
+export interface BreadcrumbsProp {
     links: BreadcrumbProp[];
     linkType?: LinkType;
 }
@@ -26,7 +26,7 @@ const Breadcrumbs: FC<BreadcrumbsProp> = ({ links, linkType }: BreadcrumbsProp) 
                 )}
                 {index !== 0 && <ArrowRight color={Colors.Secondary} />}
                 <Link href={href} type={linkType}>
-                    <span className="gg-breadcrumbs-link">{title}</span>
+                    {title}
                 </Link>
             </div>
         ))}

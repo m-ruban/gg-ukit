@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import BasicHeader, { HeaderTag, HeaderType, HeaderLine } from 'gg-ukit/components/Header/BasicHeader';
 
-interface HeaderProps {
+export interface HeaderProps {
     title: string;
     line?: HeaderLine;
     combineColor?: boolean;

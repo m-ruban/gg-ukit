@@ -6,7 +6,7 @@ import ArrowUp from 'gg-ukit/components/Icon/ArrowUp';
 import Colors from 'gg-ukit/modules/colors';
 import 'gg-ukit/components/Collapse/collapse.less';
 
-interface CollapseProps {
+export interface CollapseProps {
     title: string;
     children: ReactNode;
     defaultShow?: boolean;

@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
 import 'gg-ukit/components/Column/column.less';
 
-interface ColumnProps {
+export interface ColumnProps {
     l?: number;
     m?: number;
     s?: number;

@@ -8,7 +8,7 @@ export enum FramedImageKind {
     Right = 'right',
 }
 
-interface FramedImageProps extends HoveredImageProps {
+export interface FramedImageProps extends HoveredImageProps {
     note: string;
     kind?: FramedImageKind;
 }

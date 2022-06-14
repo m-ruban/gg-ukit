@@ -7,7 +7,7 @@ export enum LinkType {
     Promo = 'promo',
 }
 
-interface LinkProp {
+export interface LinkProp {
     href: string;
     type?: LinkType;
     children: ReactNode;

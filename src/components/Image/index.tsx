@@ -7,7 +7,7 @@ export interface BasicImageProps extends React.ImgHTMLAttributes<HTMLImageElemen
     alt: string;
 }
 
-interface ImageProps extends BasicImageProps {
+export interface ImageProps extends BasicImageProps {
     wrapped?: boolean;
     noted?: boolean;
 }

@@ -6,7 +6,7 @@ export enum InputKind {
     Secondary = 'secondary',
 }
 
-interface InputProps {
+export interface InputProps {
     kind?: InputKind;
     placeholder: string;
 }
