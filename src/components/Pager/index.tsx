@@ -46,7 +46,7 @@ const Pager: FC<PagerProps> = ({ selected, prev, start, middle, end, next, urlTe
                 </div>
             )}
             {middle.length > 0 && (
-                <div className="gg-pager-middle">
+                <div className="gg-pager-item-list">
                     {middle.map((page) => (
                         <div
                             key={page}
@@ -65,13 +65,15 @@ const Pager: FC<PagerProps> = ({ selected, prev, start, middle, end, next, urlTe
             {end.length > 0 && (
                 <div className="gg-pager-extended-list">
                     <div className="gg-pager-reduction">...</div>
-                    {end.map((page, index) => (
-                        <div key={page} className="gg-pager-item">
-                            <Link key={page} href={getHref(urlTemplate, page)} type={LinkType.Secondary}>
-                                {page}
-                            </Link>
-                        </div>
-                    ))}
+                    <div className="gg-pager-item-list">
+                        {end.map((page, index) => (
+                            <div key={page} className="gg-pager-item">
+                                <Link key={page} href={getHref(urlTemplate, page)} type={LinkType.Secondary}>
+                                    {page}
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
             {next && (
