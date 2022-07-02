@@ -20,6 +20,7 @@ const changeSlide = (slider: RefObject<HTMLDivElement>, statusLine: RefObject<HT
 };
 
 const Slider: FC<SliderProps> = ({ slides, note }) => {
+    const isFirstRender = useRef<boolean>(true);
     const slider = useRef<HTMLDivElement>(null);
     const statusLine = useRef<HTMLDivElement>(null);
     const selectedSlide = useRef<HTMLDivElement>(null);
@@ -28,6 +29,9 @@ const Slider: FC<SliderProps> = ({ slides, note }) => {
 
     // scroll to selected preview
     useEffect(() => {
+        if (isFirstRender.current) {
+            return;
+        }
         if (showPreview) {
             selectedSlide.current.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
         }
@@ -37,6 +41,10 @@ const Slider: FC<SliderProps> = ({ slides, note }) => {
     useEffect(() => {
         statusLine.current.style.width = `${100 / slides.length}%`;
     }, [slides]);
+
+    useEffect(() => {
+        isFirstRender.current = false;
+    }, []);
 
     // slide animate
     const prevSlide = useCallback(() => {
