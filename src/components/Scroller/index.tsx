@@ -1,6 +1,6 @@
 import React, { FC, MouseEvent, ReactNode, useCallback, useRef } from 'react';
 
-import 'components/Scroller/scroller.less';
+import 'gg-ukit/components/Scroller/scroller.less';
 
 const SLIDE_SPEED = 1.2;
 
