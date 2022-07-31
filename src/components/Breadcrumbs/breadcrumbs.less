@@ -1,3 +1,5 @@
+@import '../../styles/screen';
+
 .gg-breadcrumbs {
     text-transform: uppercase;
     display: flex;
@@ -14,4 +16,16 @@
 
 .gg-breadcrumbs-home {
     margin-right: 5px;
+}
+
+.gg-breadcrumbs-link-hide-xs {
+    display: none;
+
+    @media @screen-gt-xs {
+        display: block;
+    }
+}
+
+.gg-breadcrumbs-text {
+    font-size: 14px;
 }
