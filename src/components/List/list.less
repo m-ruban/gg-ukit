@@ -3,9 +3,15 @@
 .gg-list li {
     .basic-text();
 
-    padding-left: 15px;
-    background-image: url('./list-icon.svg');
-    background-position: 0 10px;
-    background-size: 7px 7px;
-    background-repeat: no-repeat;
+    &::before {
+        content: ' ';
+        display: inline-block;
+        background-image: url('./list-icon.svg');
+        background-position: 0 8px;
+        margin-right: 5px;
+        background-size: 7px 7px;
+        background-repeat: no-repeat;
+        width: 7px;
+        height: 18px;
+    }
 }
