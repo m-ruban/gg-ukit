@@ -8,10 +8,6 @@
     &:hover {
         cursor: pointer;
     }
-
-    &::before {
-        content: '\00a0';
-    }
 }
 
 .gg-tooltip {
@@ -26,6 +22,7 @@
     border-radius: 5px;
     max-width: 200px;
     width: max-content;
+    z-index: 999;
 }
 
 .gg-tooltip_visible {
