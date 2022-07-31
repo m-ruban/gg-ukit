@@ -13,7 +13,7 @@ export interface FramedImageProps extends HoveredImageProps {
     kind?: FramedImageKind;
 }
 
-const FramedImage: FC<FramedImageProps> = ({ src, alt, kind, note, hoverView }) => {
+const FramedImage: FC<FramedImageProps> = ({ src, alt, kind, note, hoverView, loading }) => {
     return (
         <div
             className={classnames(
@@ -22,7 +22,7 @@ const FramedImage: FC<FramedImageProps> = ({ src, alt, kind, note, hoverView }) 
                 { [`gg-img-wrapper_${kind}`]: kind }
             )}
         >
-            <HoveredImage src={src} alt={alt} noted={Boolean(note)} hoverView={hoverView} />
+            <HoveredImage src={src} alt={alt} noted={Boolean(note)} hoverView={hoverView} loading={loading} />
             {note && <div className="gg-img-note">{note}</div>}
         </div>
     );

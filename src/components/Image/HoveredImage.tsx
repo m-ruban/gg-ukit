@@ -7,15 +7,18 @@ export interface HoveredImageProps extends BasicImageProps {
     hoverView?: ReactNode;
 }
 
-const HoveredImage: FC<HoveredImageProps> = ({ src, alt, noted, hoverView, ...props }) => {
+const HoveredImage: FC<HoveredImageProps> = ({ src, alt, noted, hoverView, loading, ...props }) => {
     return (
         <div className="gg-hovered-img" {...props}>
-            <Image src={src} alt={alt} noted={noted} wrapped />
+            <Image src={src} alt={alt} noted={noted} loading={loading} wrapped />
             <div className="gg-hovered-img-overlay">
                 <div className="gg-hovered-img-overlay-content">
                     {alt && <div className="gg-hovered-img-alt">{alt}</div>}
                     <div className="gg-hovered-img-hover-view">{hoverView}</div>
                 </div>
+            </div>
+            <div className="gg-hovered-img-mobile-hover-view">
+                <div className="gg-hovered-img-mobile-hover-view-content">{hoverView}</div>
             </div>
         </div>
     );

@@ -3,8 +3,8 @@
 @import '../../styles/font-sizes';
 @import '../../styles/mixins';
 
-@margin-wrapped-img: 30px;
-@short-margin-wrapped-img: 15px;
+@margin-wrapped-img: 20px;
+@short-margin-wrapped-img: 10px;
 
 // wrapper
 .gg-img-wrapper {
@@ -12,14 +12,17 @@
 
     position: relative;
     margin: @margin-wrapped-img 0;
-    padding: 20px;
+    padding: 15px;
     background-color: @tertiary;
     border-radius: 4px;
+
+    @media @screen-gt-xs {
+        padding: 20px;
+    }
 }
 
 @media @screen-gt-xs {
     .gg-img-wrapper_left-or-right {
-        padding: 20px;
         max-width: 270px;
         border-top: none;
     }
@@ -41,4 +44,5 @@
 
     text-align: center;
     margin-top: 5px;
+    font-size: 14px;
 }
