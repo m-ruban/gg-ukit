@@ -1,0 +1,19 @@
+.gg-scroller {
+    overflow: auto;
+    scrollbar-width: none;
+    user-select: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.gg-scroller_active {
+    cursor: grabbing;
+}
+
+.gg-scroller_disable-events {
+    a {
+        pointer-events: none;
+    }
+}
