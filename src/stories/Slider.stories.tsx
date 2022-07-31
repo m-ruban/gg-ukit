@@ -5,9 +5,10 @@ import Column from 'gg-ukit/components/Column';
 import Paragraph from 'gg-ukit/components/Paragraph';
 import Modal from 'gg-ukit/components/Modal';
 import HoveredImage from 'gg-ukit/components/Image/HoveredImage';
-import SearchAdd from 'gg-ukit/components/Icon/SearchAdd';
-
 import SliderComponent from 'gg-ukit/components/Slider';
+import Button, { ButtonKind } from 'components/Button';
+import Search from 'components/Icon/Search';
+import Colors from 'modules/colors';
 
 const slideStyleExample = { height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' };
 export const DefaultSlider = (args) => (
@@ -59,19 +60,20 @@ export const ImageSlider = (args) => {
                 <Column l={7} m={8}>
                     <SliderComponent
                         {...args}
-                        slides={[slide1, slide2].map((image, index) => {
+                        slides={[slide1, slide2].map((image) => {
                             return {
                                 view: (
                                     <HoveredImage
                                         {...image}
                                         hoverView={
-                                            <div
+                                            <Button
+                                                kind={ButtonKind.Promo}
                                                 onClick={() => {
                                                     setZoomImg({ show: true, img: { ...image } });
                                                 }}
-                                            >
-                                                <SearchAdd color="#DB9D39" scale={2} />
-                                            </div>
+                                                icon={<Search color={Colors.Secondary} />}
+                                                rounded
+                                            />
                                         }
                                     />
                                 ),

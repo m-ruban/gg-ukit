@@ -1,6 +1,7 @@
 import React, { FC, ReactNode, RefObject, useRef, useState, useCallback, useEffect, useMemo } from 'react';
 import classnames from 'classnames';
 import Arrows from 'gg-ukit/components/Slider/Arrows';
+import Scroller from 'gg-ukit/components/Scroller';
 import 'gg-ukit/components/Slider/slider.less';
 
 export interface Slide {
@@ -88,22 +89,29 @@ const Slider: FC<SliderProps> = ({ slides, note }) => {
                     />
                 </div>
                 {showPreview && (
-                    <div className="gg-slider-items gg-slider-items_previews">
-                        {slides.map((slide, index) => (
-                            <div
-                                ref={index === selected ? selectedSlide : null}
-                                key={`preview_${index}`}
-                                className={classnames('gg-slider-preview', {
-                                    'gg-slider-preview_active': index === selected,
-                                })}
-                                onClick={() => {
-                                    onClickPreview(index);
-                                }}
-                            >
-                                {slide.preview}
-                            </div>
-                        ))}
-                    </div>
+                    <Scroller>
+                        <div
+                            className="gg-slider-items gg-slider-items_previews"
+                            onDragStart={(e) => {
+                                e.preventDefault();
+                            }}
+                        >
+                            {slides.map((slide, index) => (
+                                <div
+                                    ref={index === selected ? selectedSlide : null}
+                                    key={`preview_${index}`}
+                                    className={classnames('gg-slider-preview', {
+                                        'gg-slider-preview_active': index === selected,
+                                    })}
+                                    onClick={() => {
+                                        onClickPreview(index);
+                                    }}
+                                >
+                                    {slide.preview}
+                                </div>
+                            ))}
+                        </div>
+                    </Scroller>
                 )}
                 <Arrows nextSlide={nextSlide} prevSlide={prevSlide} />
             </div>

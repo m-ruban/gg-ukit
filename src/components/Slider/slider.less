@@ -18,8 +18,12 @@
 // container
 .gg-slider {
     border-radius: 4px;
-    padding: 20px;
+    padding: 15px;
     background-color: @tertiary;
+
+    @media @screen-gt-xs {
+        padding: 20px;
+    }
 }
 
 .gg-slider-content {
@@ -38,14 +42,7 @@
 }
 
 .gg-slider-items_previews {
-    scrollbar-width: none;
     margin-top: @preview-margin;
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
 }
 
 // items
@@ -122,4 +119,5 @@
 
     text-align: center;
     margin-top: 5px;
+    font-size: 14px;
 }
