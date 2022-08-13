@@ -11,8 +11,19 @@ export const GroupControl = (args) => (
         <Button kind={ButtonKind.Promo} icon={<Search color={Colors.Secondary} />} />
     </GroupControlComponent>
 );
+GroupControl.args = {
+    rounded: false,
+};
 
 export default {
     title: 'Group Control',
     component: GroupControlComponent,
+    argTypes: {
+        rounded: {
+            description: 'rounded',
+            control: {
+                type: 'boolean',
+            },
+        },
+    },
 };

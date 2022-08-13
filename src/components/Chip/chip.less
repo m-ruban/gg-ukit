@@ -1,0 +1,46 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.gg-chip {
+    display: inline-block;
+    position: relative;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.gg-chip-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.gg-chip-input-content {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px 16px;
+    border: 1px solid #2c333b;
+
+    .basic-text();
+
+    color: @secondary;
+    font-size: 16px;
+
+    background-color: @minor;
+    background-image: linear-gradient(#272b31, #272b31);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 150ms, background-color 150ms;
+    background-position: 0 100%;
+
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+
+.gg-chip-input:checked + .gg-chip-input-content {
+    background-color: @tertiary;
+    background-image: linear-gradient(@tertiary-dimmed, @tertiary-dimmed);
+
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
