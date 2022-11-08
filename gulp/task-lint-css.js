@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const gulpStylelint = require('gulp-stylelint');
 
-function stylelint() {
+function lintCss() {
     return gulp.src(['src/**/*.less']).pipe(
         gulpStylelint({
             syntax: 'less',
@@ -16,5 +16,5 @@ function stylelint() {
 }
 
 module.exports = {
-    stylelint,
+    lintCss,
 };
