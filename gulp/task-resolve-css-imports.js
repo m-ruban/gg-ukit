@@ -1,16 +1,16 @@
 const gulp = require('gulp');
 const { Transform } = require('stream');
 
+const lessImportTemplate = /^((require|import\s)\(?['"].+)\.less(['"]\)?;)$/gm;
+
 const resolveCss = () =>
     new Transform({
         objectMode: true,
-        transform(file, _, callback) {
-            const lines = file.contents.toString().split('\n');
-            for (let i = 0; i < lines.length; i++) {
-                lines[i] = lines[i].replace('.less', '.css');
-            }
-            file.contents = Buffer.from(lines.join('\n'));
-            callback(undefined, file);
+        transform(chunk, _, callback) {
+            const content = chunk.contents.toString();
+            const resolvedContent = content.replace(lessImportTemplate, '$1.css$3');
+            chunk.contents = Buffer.from(resolvedContent);
+            callback(undefined, chunk);
         },
     });
 
