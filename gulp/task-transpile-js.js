@@ -6,7 +6,7 @@ const babelConfig = require('../babel.config');
 
 const JS_SRC = ['src/**/!(*.test|*.stories|*.utils).{js,jsx,ts,tsx}'];
 
-function jsBuild() {
+function transpileJs() {
     return gulp
         .src(JS_SRC)
         .pipe(cached('js'))
@@ -17,5 +17,5 @@ function jsBuild() {
 }
 
 module.exports = {
-    jsBuild,
+    transpileJs,
 };
