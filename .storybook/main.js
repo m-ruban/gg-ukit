@@ -1,6 +1,34 @@
 const path = require('path');
-const useLessLoader = require('storybook-less-loader');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { LessPluginModuleResolver } = require('less-plugin-module-resolver');
+
+function useLessLoader(config, handleLessRule) {
+    const cssModel = config.module.rules.find(i => i.test.toString() === "/\\.css$/")
+    let lessRule = {
+        test: /\.less$/,
+        sideEffects: true,
+        use: [
+            ...cssModel.use,
+            {
+                loader: 'less-loader',
+                options: {
+                    lessOptions: {
+                        plugins: [
+                            new LessPluginModuleResolver({
+                                alias: {
+                                    'gg-ukit/styles': 'src/styles',
+                                },
+                            }),
+                        ],
+                    },
+                }
+            }
+        ]
+    }
+    if (handleLessRule) lessRule = handleLessRule(lessRule)
+    config.module.rules.push(lessRule)
+    return config
+}
 
 module.exports = {
     "stories": [
