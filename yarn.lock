@@ -8120,6 +8120,11 @@ less-loader@7.3.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+less-plugin-module-resolver@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/less-plugin-module-resolver/-/less-plugin-module-resolver-1.0.3.tgz#fbeb8c82ffc936d356b4d7966e0dbb4b9409fb82"
+  integrity sha512-w5xD9Kv1KpqG0ie181t1RH99n0tfbGpBnajrpOfRKJgqrlRdKsfYax5WUFqRlJ1tE5pJqssV6FJQeodY0IGylw==
+
 "less@^3.7.1 || ^4.0.0":
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/less/-/less-4.1.3.tgz#175be9ddcbf9b250173e0a00b4d6920a5b770246"
