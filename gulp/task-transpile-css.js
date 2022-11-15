@@ -1,30 +1,29 @@
 const gulp = require('gulp');
 const cached = require('gulp-cached');
 const less = require('gulp-less');
+const { LessPluginModuleResolver } = require('less-plugin-module-resolver');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
-const { Transform } = require('stream');
-
-const filterEmptyFile = () =>
-    new Transform({
-        objectMode: true,
-        transform(file, _, callback) {
-            if (file.contents.length > 0) {
-                this.push(file);
-            }
-            callback();
-        },
-    });
+const { filterEmptyFile } = require('./utils/streamTransform');
 
 const CSS_SRC = ['src/**/*.{css,less}'];
 
 function transpileCss() {
-    const postcssPlugins = [cssnano()];
     return gulp
         .src(CSS_SRC)
         .pipe(cached('css'))
-        .pipe(less())
-        .pipe(postcss(postcssPlugins))
+        .pipe(
+            less({
+                plugins: [
+                    new LessPluginModuleResolver({
+                        alias: {
+                            'gg-ukit/styles': 'src/styles',
+                        },
+                    }),
+                ],
+            })
+        )
+        .pipe(postcss([cssnano()]))
         .pipe(filterEmptyFile())
         .pipe(gulp.dest('build'));
 }

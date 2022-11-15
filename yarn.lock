@@ -8120,6 +8120,11 @@ less-loader@7.3.0:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+less-plugin-module-resolver@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/less-plugin-module-resolver/-/less-plugin-module-resolver-1.0.3.tgz#fbeb8c82ffc936d356b4d7966e0dbb4b9409fb82"
+  integrity sha512-w5xD9Kv1KpqG0ie181t1RH99n0tfbGpBnajrpOfRKJgqrlRdKsfYax5WUFqRlJ1tE5pJqssV6FJQeodY0IGylw==
+
 "less@^3.7.1 || ^4.0.0":
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/less/-/less-4.1.3.tgz#175be9ddcbf9b250173e0a00b4d6920a5b770246"
@@ -11671,11 +11676,6 @@ storybook-addon-outline@^1.4.1:
     "@storybook/components" "^6.3.0"
     "@storybook/core-events" "^6.3.0"
     ts-dedent "^2.1.1"
-
-storybook-less-loader@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/storybook-less-loader/-/storybook-less-loader-0.1.0.tgz#60267d62058a18611228c0439fab22e6e2fd4d6e"
-  integrity sha512-FwvgGEBV364/hrJ3W9wjwYFQ5BZPGBndl8PKWA0r/I7nTzt25KPvD/6YT6cswnAHqNIjZRGL7u/vTPo3yQWzvw==
 
 stream-browserify@^2.0.1:
   version "2.0.2"
