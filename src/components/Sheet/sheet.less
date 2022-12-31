@@ -1,0 +1,92 @@
+@import 'gg-ukit/styles/colors';
+@import 'gg-ukit/styles/screen';
+@import 'gg-ukit/styles/icons';
+
+// layer
+@sheet-horizontal-padding-mobile: 20px;
+@sheet-horizontal-padding: 30px;
+
+.gg-sheet {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 3;
+    transition: transform 250ms ease-in;
+    background-color: @minor;
+
+    padding: 30px @sheet-horizontal-padding-mobile 0 @sheet-horizontal-padding-mobile;
+
+    @media @screen-gt-xs {
+        padding: 40px @sheet-horizontal-padding 0 @sheet-horizontal-padding;
+    }
+}
+
+.gg-sheet_left {
+    left: 0;
+    transform: translateX(-100%);
+    border-right: 10px solid @tertiary;
+}
+
+.gg-sheet_right {
+    right: 0;
+    transform: translateX(100%);
+    border-left: 10px solid @tertiary;
+}
+
+.gg-sheet_open {
+    transform: translateX(0);
+}
+
+.gg-sheet_close-left {
+    transform: translateX(-100%);
+}
+
+.gg-sheet_close-right {
+    transform: translateX(100%);
+}
+
+// header
+@close-button-margin-mobile: 15px;
+@close-button-margin: 25px;
+
+.gg-sheet-header {
+    display: block;
+    margin-right: @close-button-margin-mobile + @icon-2x-height;
+
+    @media @screen-gt-xs {
+        margin-right: @close-button-margin + @icon-2x-height;
+    }
+}
+
+.gg-sheet-close-button {
+    position: fixed;
+    top: @close-button-margin-mobile;
+    right: @close-button-margin-mobile;
+    cursor: pointer;
+
+    @media @screen-gt-xs {
+        top: @close-button-margin;
+        right: @close-button-margin;
+    }
+}
+
+// content
+.gg-sheet-content {
+    overflow: auto;
+    margin-bottom: 25px;
+}
+
+// footer
+.gg-sheet-footer {
+    display: flex;
+    min-height: 66px;
+    background-color: @tertiary;
+    padding: 15px 20px;
+    width: calc(100% + @sheet-horizontal-padding * 2);
+    box-sizing: border-box;
+    justify-content: flex-end;
+    margin-left: -@sheet-horizontal-padding;
+}
