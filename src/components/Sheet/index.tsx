@@ -43,7 +43,7 @@ const Sheet: FC<SheetProps> = ({
                 exit: `gg-sheet gg-sheet_${positionType} gg-sheet_close-${positionType}`,
             }}
         >
-            <div>
+            <div className={`gg-sheet gg-sheet_${positionType}`}>
                 <div>
                     <div className="gg-sheet-header">{header}</div>
                     <div className="gg-sheet-close-button" onClick={onClose}>
