@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import Colors from 'gg-ukit/modules/colors';
@@ -28,6 +28,13 @@ const Sheet: FC<SheetProps> = ({
     footer = null,
     positionType = SheetPositionType.Left,
 }) => {
+    const [isServer, setServer] = useState(true);
+    useEffect(() => {
+        setServer(false);
+    }, []);
+    if (isServer) {
+        return null;
+    }
     return ReactDOM.createPortal(
         <CSSTransition
             appear
