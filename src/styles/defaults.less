@@ -62,13 +62,18 @@ video {
     padding: 0;
     margin: 0;
     border: 0;
-    outline: none;
     background: transparent;
 }
 
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+}
+
+@import 'gg-ukit/styles/mixins';
+
+:focus-visible {
+    .focus-ring();
 }
 
 table {

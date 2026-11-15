@@ -18,7 +18,8 @@
 
     display: none;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
         opacity: 1;
         background-color: fade(@minor, 80%);
     }
@@ -61,7 +62,8 @@
     display: inline-block;
     opacity: 0.7;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
         opacity: 1;
     }
 }

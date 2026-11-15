@@ -1,5 +1,6 @@
 @import 'gg-ukit/styles/colors';
 @import 'gg-ukit/styles/screen';
+@import 'gg-ukit/styles/mixins';
 
 @pager-margin: 10px;
 @pager-font-size: 32px;
@@ -8,6 +9,10 @@
 .gg-pager {
     display: flex;
     align-items: center;
+
+    a {
+        .keyboard-focus();
+    }
 }
 
 .gg-pager-extended-list {

@@ -62,13 +62,18 @@ video {
     padding: 0;
     margin: 0;
     border: 0;
-    outline: none;
     background: transparent;
 }
 
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+}
+
+:focus-visible {
+    outline: 2px solid #DB9D39;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #1F2327;
 }
 
 table {

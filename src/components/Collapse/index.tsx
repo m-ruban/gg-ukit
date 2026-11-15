@@ -18,6 +18,15 @@ const Collapse: FC<CollapseProps> = ({ title, children, defaultShow = false }) =
         <div>
             <div
                 className="gg-collapse-title"
+                role="button"
+                tabIndex={0}
+                aria-expanded={show}
+                onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        setShow((visible) => !visible);
+                    }
+                }}
                 onClick={() => {
                     setShow(!show);
                 }}

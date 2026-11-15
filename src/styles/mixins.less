@@ -1,4 +1,17 @@
 @import 'gg-ukit/styles/font-sizes';
+@import 'gg-ukit/styles/colors';
+
+.focus-ring() {
+    outline: 2px solid @primary-minor;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px @minor;
+}
+
+.keyboard-focus() {
+    &:focus-visible {
+        .focus-ring();
+    }
+}
 
 .img-responsive() {
     max-width: 100%;
@@ -11,5 +24,5 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 1.7;
-    color: #738697;
+    color: @text;
 }

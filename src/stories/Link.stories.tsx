@@ -2,14 +2,26 @@ import React from 'react';
 import CustomDocsPage from 'gg-ukit/stories/CustomDocsPage.utils';
 import Link, { LinkType } from 'gg-ukit/components/Link';
 
-export const DefaultLink = (args) => <Link {...args}>Default Link</Link>;
+export const DefaultLink = (args) => (
+    <Link {...args} href="/">
+        Default Link
+    </Link>
+);
 
-export const SecondaryLink = (args) => <Link {...args}>Secondary Link</Link>;
+export const SecondaryLink = (args) => (
+    <Link {...args} href="/">
+        Secondary Link
+    </Link>
+);
 SecondaryLink.args = {
     type: LinkType.Secondary,
 };
 
-export const PromoLink = (args) => <Link {...args}>Promo Link</Link>;
+export const PromoLink = (args) => (
+    <Link {...args} href="/">
+        Promo Link
+    </Link>
+);
 PromoLink.args = {
     type: LinkType.Promo,
 };
