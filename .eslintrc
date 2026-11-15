@@ -1,6 +1,7 @@
 {
     "root": true,
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": { "requireConfigFile": false },
     "extends": ["plugin:react/recommended", "prettier"],
     "plugins": ["prettier", "react-hooks"],
     "rules": {

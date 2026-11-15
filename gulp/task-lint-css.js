@@ -1,18 +1,12 @@
-const gulp = require('gulp');
-const gulpStylelint = require('gulp-stylelint');
-
-function lintCss() {
-    return gulp.src(['src/**/*.less']).pipe(
-        gulpStylelint({
-            syntax: 'less',
-            reporters: [
-                {
-                    formatter: 'string',
-                    console: true,
-                },
-            ],
-        })
-    );
+async function lintCss() {
+    const { default: stylelint } = await import('stylelint');
+    const result = await stylelint.lint({ files: 'src/**/*.less', formatter: 'string' });
+    if (result.report) {
+        process.stdout.write(result.report);
+    }
+    if (result.errored) {
+        throw new Error('Stylelint found errors');
+    }
 }
 
 module.exports = {

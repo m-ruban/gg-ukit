@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
-const sourcemaps = require('gulp-sourcemaps');
 const cached = require('gulp-cached');
 const babelConfig = require('../babel.config');
 
@@ -8,12 +7,10 @@ const JS_SRC = ['src/**/!(*.test|*.stories|*.utils).{js,jsx,ts,tsx}'];
 
 function transpileJs() {
     return gulp
-        .src(JS_SRC)
+        .src(JS_SRC, { sourcemaps: true })
         .pipe(cached('js'))
-        .pipe(sourcemaps.init())
         .pipe(babel(babelConfig))
-        .pipe(sourcemaps.write('maps'))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build', { sourcemaps: 'maps' }));
 }
 
 module.exports = {

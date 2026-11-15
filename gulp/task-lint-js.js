@@ -1,11 +1,9 @@
 const gulp = require('gulp');
-const eslint = require('gulp-eslint7');
-const plumber = require('gulp-plumber');
+const eslint = require('gulp-eslint-new');
 
 function lintJs() {
     return gulp
         .src(['./src/**/*.{js,jsx,ts,tsx}', './gulp/**/*.{js,ts}', './gulpfile.js'])
-        .pipe(plumber())
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());

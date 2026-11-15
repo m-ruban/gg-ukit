@@ -1,9 +1,9 @@
-const del = require('del');
+const { rm } = require('node:fs/promises');
 
-function clean(callback) {
-    del(['./build/**', './storybook-static/**']).then(() => {
-        callback();
-    });
+async function clean() {
+    await Promise.all(
+        ['build', 'storybook-static'].map((directory) => rm(directory, { recursive: true, force: true }))
+    );
 }
 
 module.exports = {

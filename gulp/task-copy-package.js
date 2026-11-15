@@ -1,18 +1,10 @@
-const gulp = require('gulp');
-const cached = require('gulp-cached');
-const editor = require('gulp-json-editor');
+const { mkdir, readFile, writeFile } = require('node:fs/promises');
 
-function copyPackage() {
-    return gulp
-        .src(['package.json'])
-        .pipe(cached('copied'))
-        .pipe(
-            editor(function (json) {
-                delete json.scripts.postinstall;
-                return json;
-            })
-        )
-        .pipe(gulp.dest('build'));
+async function copyPackage() {
+    const json = JSON.parse(await readFile('package.json', 'utf8'));
+    delete json.scripts.postinstall;
+    await mkdir('build', { recursive: true });
+    await writeFile('build/package.json', `${JSON.stringify(json, null, 2)}\n`);
 }
 
 module.exports = {
