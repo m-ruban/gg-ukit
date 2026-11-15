@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "gulp clean",
     "build": "gulp clean && gulp lint && gulp raw-copy && yarn types-compile && gulp transpile && gulp copy-package",
-    "publish-pkg": "cd build && npm publish && wait",
+    "publish-pkg": "cd build && npm publish --registry=https://registry.npmjs.org/",
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "ts-check": "tsc -p tsconfig.json --noEmit",
     "types-compile": "tsc -p tsconfig-compile.json",
