@@ -86,10 +86,8 @@ export default {
     argTypes: {
         positionType: {
             description: 'Позиция листа',
-            control: {
-                type: 'radio',
-                options: SheetPositionType,
-            },
+            options: Object.values(SheetPositionType),
+            control: { type: 'radio' },
         },
         header: {
             table: {

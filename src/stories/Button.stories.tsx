@@ -1,4 +1,5 @@
 import React from 'react';
+import { fn } from '@storybook/test';
 import ButtonComponent, { ButtonKind } from 'gg-ukit/components/Button';
 import Colors from 'gg-ukit/modules/colors';
 import ArrowLeftAlt2 from 'gg-ukit/components/Icon/ArrowLeftAlt2';
@@ -35,17 +36,16 @@ IconButton.args = {
 export default {
     title: 'Button',
     component: ButtonComponent,
+    args: { rounded: false, onClick: fn() },
     argTypes: {
         kind: {
             description: 'Тип кнопки',
-            control: {
-                type: 'select',
-                options: ButtonKind,
-            },
+            options: Object.values(ButtonKind),
+            control: { type: 'select' },
         },
         rounded: {
             description: 'Скругленные края границы',
-            defaultValue: false,
+            table: { defaultValue: { summary: 'false' } },
             control: {
                 type: 'boolean',
             },

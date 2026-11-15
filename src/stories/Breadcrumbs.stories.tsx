@@ -39,15 +39,14 @@ export default {
     argTypes: {
         linkType: {
             description: 'Тип ссылки',
-            control: {
-                type: 'select',
-                options: LinkType,
-            },
+            options: Object.values(LinkType),
+            control: { type: 'select' },
         },
         links: {
             description: 'Ссылки для пагинации',
-            type: 'select',
-            options: {
+            control: { type: 'select' },
+            options: ['Example'],
+            mapping: {
                 Example: [
                     {
                         title: 'Test',

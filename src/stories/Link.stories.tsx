@@ -30,10 +30,8 @@ export default {
     argTypes: {
         type: {
             description: 'Тип ссылки',
-            control: {
-                type: 'select',
-                options: LinkType,
-            },
+            options: Object.values(LinkType),
+            control: { type: 'select' },
         },
     },
     parameters: {

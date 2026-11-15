@@ -1,8 +1,10 @@
 import { themes } from '@storybook/theming';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
+export const tags = ['autodocs'];
+
 export const parameters = {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
         expanded: true,
         matchers: {
@@ -25,4 +27,4 @@ export const parameters = {
     viewport: {
         viewports: INITIAL_VIEWPORTS,
     },
-}
+};

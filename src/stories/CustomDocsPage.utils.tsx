@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react';
-import { Title, Subtitle, Description, Primary, ArgsTable, Stories, PRIMARY_STORY } from '@storybook/addon-docs';
+import { Title, Subtitle, Description, Primary, Controls, Stories } from '@storybook/blocks';
 
 interface CustomDocsPageProp {
     description: ReactNode;
@@ -12,7 +12,7 @@ const CustomDocsPage: FC<CustomDocsPageProp> = ({ description }) => (
         <Subtitle />
         <Description />
         <Primary />
-        <ArgsTable story={PRIMARY_STORY} />
+        <Controls />
         <Stories />
     </>
 );

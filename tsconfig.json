@@ -3,6 +3,7 @@
         "baseUrl": "./",
         "outDir": "./build/",
         "sourceMap": true,
+        "skipLibCheck": true,
         "noImplicitAny": false,
         "module": "commonjs",
         "target": "es2017",

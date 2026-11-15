@@ -317,6 +317,7 @@ const DocsPage = () => (
 export default {
     title: 'Icon',
     component: AddAlt,
+    args: { scale: 1 },
     argTypes: {
         color: {
             description: 'Цвет иконки',
@@ -326,7 +327,7 @@ export default {
         },
         scale: {
             description: 'Размер иконки',
-            defaultValue: 1,
+            table: { defaultValue: { summary: '1' } },
             options: [1, 2],
             control: { type: 'radio' },
         },

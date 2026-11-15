@@ -11,15 +11,15 @@
     "postinstall": "ln -sf $(pwd)/githooks/* .git/hooks || true",
     "ts-check": "tsc -p tsconfig.json --noEmit",
     "types-compile": "tsc -p tsconfig-compile.json",
-    "storybook": "start-storybook -p 6006 -s ./public/,./src/styles/woff",
-    "build-storybook": "build-storybook -s ./public/,./src/styles/woff"
+    "dev": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-transition-group": "^4.4.2",
-    "typescript": "^4.5.4"
+    "typescript": "5.6.3"
   },
   "peerDependencies": {
     "react": ">= 17.0.2 < 18",
@@ -32,12 +32,18 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "7.15.0",
     "@hh.ru/stylelint-config-hh": "~4.1.0",
-    "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
-    "@storybook/addon-links": "^6.3.8",
-    "@storybook/addons": "^6.3.12",
-    "@storybook/react": "^6.3.8",
-    "@storybook/theming": "^6.3.12",
+    "@storybook/addon-docs": "8.6.19",
+    "@storybook/addon-essentials": "8.6.19",
+    "@storybook/addon-links": "8.6.19",
+    "@storybook/addon-viewport": "8.6.19",
+    "@storybook/blocks": "8.6.19",
+    "@storybook/manager-api": "8.6.19",
+    "@storybook/react-webpack5": "8.6.19",
+    "@storybook/test": "8.6.19",
+    "@storybook/theming": "8.6.19",
+    "@types/node": "20.14.15",
+    "@types/react": "17",
+    "@types/react-dom": "17",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.3.0",
@@ -45,8 +51,6 @@
     "del": "~2.2.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-webpack": "^0.13.1",
-    "eslint-loader": "^4.0.2",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-prettier": "^4.0.0",
@@ -69,6 +73,7 @@
     "lint-staged": "^11.1.2",
     "postcss": "^8.4.18",
     "prettier": "^2.4.1",
+    "storybook": "8.6.19",
     "style-loader": "^3.2.1",
     "stylelint": "13.13.1",
     "stylelint-config-prettier": "^8.0.2",
@@ -81,6 +86,9 @@
     "ts-loader": "^9.2.6",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.53.0"
+    "webpack": "^5.94.0"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }

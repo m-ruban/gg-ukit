@@ -18,10 +18,8 @@ export default {
     argTypes: {
         kind: {
             description: 'Тип input',
-            control: {
-                type: 'select',
-                options: InputKind,
-            },
+            options: Object.values(InputKind),
+            control: { type: 'select' },
         },
         placeholder: {
             description: 'Placeholder',

@@ -71,6 +71,7 @@ const DocsPage = () => (
 export default {
     title: 'Image/Hovered Image',
     component: HoveredImageComponent,
+    args: { note: '' },
     argTypes: {
         lineColor: {
             description: 'Цвет линии наведнии',
@@ -95,7 +96,7 @@ export default {
         },
         note: {
             description: 'Сноска для изображения',
-            defaultValue: '',
+            table: { defaultValue: { summary: "''" } },
             control: {
                 type: 'text',
             },

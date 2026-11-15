@@ -36,17 +36,16 @@ const DocsPage = () => (
 
 export default {
     title: 'Header',
+    args: { combineColor: false },
     argTypes: {
         line: {
             description: 'Тип линии',
-            control: {
-                type: 'select',
-                options: HeaderLine,
-            },
+            options: Object.values(HeaderLine),
+            control: { type: 'select' },
         },
         combineColor: {
             description: 'Комбинирование цвета',
-            defaultValue: false,
+            table: { defaultValue: { summary: 'false' } },
             control: {
                 type: 'boolean',
             },

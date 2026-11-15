@@ -120,10 +120,17 @@ NotedSlider.args = {
 export default {
     title: 'Slider',
     component: SliderComponent,
+    args: { note: '' },
+    parameters: {
+        docs: {
+            // JSX inside slide objects contains circular React owners in development.
+            source: { type: 'code' },
+        },
+    },
     argTypes: {
         note: {
             description: 'Сноска для галереи',
-            defaultValue: '',
+            table: { defaultValue: { summary: "''" } },
             control: {
                 type: 'text',
             },

@@ -84,17 +84,16 @@ const DocsPage = () => (
 export default {
     title: 'Image/Framed Image',
     component: FramedImageComponent,
+    args: { note: '' },
     argTypes: {
         kind: {
             description: 'Тип изображения',
-            control: {
-                type: 'select',
-                options: FramedImageKind,
-            },
+            options: Object.values(FramedImageKind),
+            control: { type: 'select' },
         },
         note: {
             description: 'Сноска для изображения',
-            defaultValue: '',
+            table: { defaultValue: { summary: "''" } },
             control: {
                 type: 'text',
             },
